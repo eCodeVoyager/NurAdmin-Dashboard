@@ -10,6 +10,7 @@ export default {
         dark: "#1C2434",
         backGround: "#F1F5F9",
         foreGround: "#FFFFFF",
+        menuHover:"#323A48"
       },
       padding: {
         22: "100px",

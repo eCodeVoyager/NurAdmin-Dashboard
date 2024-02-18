@@ -6,12 +6,12 @@ const RootLayout = () => {
   return (
     <div className="flex h-screen overflow-hidden">
       {/* sidebar start here  */}
-      <aside className="flex w-96 h-screen bg-dark">
+      <aside className="flex w-75 h-screen bg-dark">
         <Sidebar />
       </aside>
 
       {/* content aria  */}
-      <div className="w-full">
+      <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
         <Navbar />
         <main>
           <Outlet />

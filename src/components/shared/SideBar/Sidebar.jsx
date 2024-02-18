@@ -40,9 +40,9 @@ const Sidebar = () => {
                             {/* Sub-menus  */}
                             {activeMenu === 'menu1' && (
                                 <ul className='my-4 flex flex-col gap-2.5 pl-10'>
-                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-[#DAE0EA]/50 duration-300 ease-in-out hover:text-white'>Form Elements</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white'>Form Elements</Link></li>
 
-                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-[#DAE0EA]/50 duration-300 ease-in-out hover:text-white'>From layout</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white'>From layout</Link></li>
                                 </ul>
                             )}
 
@@ -51,9 +51,9 @@ const Sidebar = () => {
                             {/* Sub-menus  */}
                             {activeMenu === 'menu2' && (
                                 <ul className='my-4 flex flex-col gap-2.5 pl-10'>
-                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-[#DAE0EA]/50 duration-300 ease-in-out hover:text-white'>Tables</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white'>Tables</Link></li>
 
-                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-[#DAE0EA]/50 duration-300 ease-in-out hover:text-white'>Pro Tables</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white'>Pro Tables</Link></li>
                                 </ul>
                             )}
 
@@ -62,10 +62,10 @@ const Sidebar = () => {
                             {/* Sub-menus  */}
                             {activeMenu === 'menu3' && (
                                 <ul className='my-4 flex flex-col gap-2.5 pl-10'>
-                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-[#DAE0EA]/50 duration-300 ease-in-out hover:text-white'>Setting</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white'>Setting</Link></li>
 
-                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-[#DAE0EA]/50 duration-300 ease-in-out hover:text-white'>Teams</Link></li>
-                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-[#DAE0EA]/50 duration-300 ease-in-out hover:text-white'>Terms & Conditions</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white'>Teams</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white'>Terms & Conditions</Link></li>
                                 </ul>
                             )}
 
@@ -77,7 +77,7 @@ const Sidebar = () => {
                         <ul className='flex flex-col gap-1.5'>
                             <li><Link className='className="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-white duration-300 ease-in-out hover:bg-menuHover' href=""><HiOutlineViewGrid />Messages</Link></li>
                             <li><Link className='className="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-white duration-300 ease-in-out hover:bg-menuHover' href=""><FiUser />Inbox</Link></li>
-                            <li><Link className='className="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-white duration-300 ease-in-out hover:bg-menuHover' href=""><FaTasks />Invoice <MdKeyboardArrowDown className='ml-auto' /></Link></li>
+                            <li><Link className='className="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-white duration-300 ease-in-out hover:bg-menuHover' href=""><FiUser />invoice</Link></li>
                         </ul>
                     </div>
                     {/* others Group  */}
@@ -85,8 +85,45 @@ const Sidebar = () => {
                         <h3 className='mb-4 ml-4 text-sm font-medium text-secondary uppercase'>Others</h3>
                         <ul className='flex flex-col gap-1.5'>
                             <li><Link className='className="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-white duration-300 ease-in-out hover:bg-menuHover' href=""><HiOutlineViewGrid />Charts</Link></li>
-                            <li><Link className='className="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-white duration-300 ease-in-out hover:bg-menuHover' href=""><FiUser />UI Elements</Link></li>
-                            <li><Link className='className="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-white duration-300 ease-in-out hover:bg-menuHover' href=""><FaTasks />Authentication <MdKeyboardArrowDown className='ml-auto' /></Link></li>
+                            <li><Link onClick={() => handleMenuClick('menu4')} className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-white duration-300 ease-in-out hover:bg-menuHover ${activeMenu === 'menu4' ? "bg-menuHover" : ""}`} href=""><FaTasks />UI Elements <MdKeyboardArrowDown className={`ml-auto text-xl ${activeMenu === 'menu4' ? "rotate-180" : ""}`} /></Link></li>
+
+
+                            {/* Sub-menus  */}
+                            {activeMenu === 'menu4' && (
+                                <ul className='my-4 flex flex-col gap-2.5 pl-10'>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Accordion</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Alerts</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Avatars</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Badge</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Breadcrumb</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Buttons</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Buttons Group</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Cards</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Dropdowns</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>List</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Modals</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Notifications</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Pagination</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Spinners</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Tabs</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Tooltips</Link></li>
+
+                                </ul>
+                            )}
+                            <li><Link onClick={() => handleMenuClick('menu5')} className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-white duration-300 ease-in-out hover:bg-menuHover ${activeMenu === 'menu5' ? "bg-menuHover" : ""}`} href=""><FaTasks />Authentication <MdKeyboardArrowDown className={`ml-auto text-xl ${activeMenu === 'menu5' ? "rotate-180" : ""}`} /></Link></li>
+
+
+                            {/* Sub-menus  */}
+                            {activeMenu === 'menu5' && (
+                                <ul className='my-4 flex flex-col gap-2.5 pl-10'>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Sign in</Link></li>
+
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Sign up</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>Reset password</Link></li>
+                                    <li><Link to="/" className='group relative flex items-center gap-2.5 rounded-md text-md font-normal text-subMenu/50 duration-300 ease-in-out hover:text-white capitalize'>2step verification</Link></li>
+                                </ul>
+                            )}
+
                         </ul>
                     </div>
                 </nav>

@@ -4,6 +4,7 @@ import InputCard from '../../components/FormElement/Cards/InputCard'
 import TextAriaCard from '../../components/FormElement/Cards/TextAriaCard'
 import ToggleSwitch from '../../components/FormElement/Cards/ToggleSwitch'
 import DateTimeCard from '../../components/FormElement/Cards/DateTimeCard'
+import FileUpload from '../../components/FormElement/Cards/FileUpload'
 
 const FormElement = () => {
   return (
@@ -16,6 +17,7 @@ const FormElement = () => {
             <InputCard/>
             <ToggleSwitch/>
             <DateTimeCard/>
+            <FileUpload/>
           </div>
           <div className="flex flex-col gap-9">
             <TextAriaCard/>

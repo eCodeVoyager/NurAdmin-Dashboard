@@ -1,4 +1,6 @@
 import React from 'react'
+import DatePicker1 from '../DatePicker1/DatePicker1'
+import DatePicker2 from '../DatePicker2/DatePicker2'
 
 const DateTimeCard = () => {
     return (
@@ -9,17 +11,8 @@ const DateTimeCard = () => {
                 </h3>
             </div>
             <div class="flex flex-col gap-5 p-6">
-                <div>
-                    <label class="mb-3 block text-sm font-medium text-black dark:text-white">
-                        Date picker
-                    </label>
-                </div>
-
-                <div>
-                    <label class="mb-3 block text-sm font-medium text-black dark:text-white">
-                        Select date
-                    </label>
-                </div>
+                <DatePicker1 />
+                <DatePicker2 />
             </div>
         </div>
     )

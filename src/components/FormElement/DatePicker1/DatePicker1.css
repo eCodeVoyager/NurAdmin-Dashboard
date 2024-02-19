@@ -1,0 +1,101 @@
+.react-datepicker-wrapper {
+  width: 100%;
+}
+.react-datepicker-popper {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transform: translate(70px, 804px);
+}
+.react-datepicker__triangle {
+  display: none;
+}
+.react-datepicker {
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  font-size: 0.8rem;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #aeaeae;
+  border-radius: 0.3rem;
+  display: inline-block;
+  position: relative;
+  line-height: initial;
+  width: 20rem;
+  padding: 1rem 0;
+}
+.react-datepicker {
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  font-size: 0.8rem;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #aeaeae;
+  border-radius: 0.3rem;
+  display: inline-block;
+  position: relative;
+  line-height: initial;
+  width: 20rem;
+}
+.react-datepicker__header {
+  text-align: center;
+  background-color: #f0f0f000;
+  border-bottom: 1px solid #aeaeae00;
+  border-top-left-radius: 0.3rem;
+  padding: 8px 0;
+  position: relative;
+}
+
+.react-datepicker__day-names {
+  white-space: nowrap;
+  margin-bottom: -8px;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.react-datepicker__week {
+  white-space: nowrap;
+  gap: 0.8rem;
+  display: flex;
+}
+.react-datepicker__day-names {
+  white-space: nowrap;
+  margin-bottom: -15px;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.react-datepicker__day-name {
+  color: #a1a1a1;
+  display: inline-block;
+  width: 1.7rem;
+  line-height: 1.7rem;
+  text-align: center;
+  margin: 0.166rem;
+}
+
+/* navigation icon style  */
+.react-datepicker__navigation--next {
+  right: 32px;
+  top: 1rem;
+}
+.react-datepicker__navigation--previous {
+  left: 32px;
+  top: 1rem;
+}
+.react-datepicker__year-read-view--down-arrow,
+.react-datepicker__month-read-view--down-arrow,
+.react-datepicker__month-year-read-view--down-arrow,
+.react-datepicker__navigation-icon::before {
+  border-color: #000;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .react-datepicker {
+    width: 18rem;
+  }
+  .react-datepicker__month-container {
+    width: 100%;
+  }
+}

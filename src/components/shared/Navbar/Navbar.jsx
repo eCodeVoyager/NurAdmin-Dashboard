@@ -5,13 +5,18 @@ import { Link } from "react-router-dom";
 import { BsChatDots } from "react-icons/bs"
 import userImg from "../../../assets/images/user-01.png";
 import { RiArrowDownSLine } from "react-icons/ri";
-
+import { useSidebar } from "../../../context/SidebarProvider";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
+  const { toggleSidebar } = useSidebar();
+
+
   return (
     <header className="sticky top-0 z-[999] flex w-full bg-foreGround shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:drop-shadow-none">
 
       <nav className="flex flex-grow w-full items-center justify-between px-4 py-4 shadow-2 md:px-6 2xl:px-11">
+        <button onClick={toggleSidebar} className="lg:hidden border p-1"><RxHamburgerMenu /></button>
         <div className="hidden sm:block">
           <form action="" method="POST">
             <div className="relative flex items-center">
@@ -46,16 +51,16 @@ const Navbar = () => {
 
 
           </ul>
-          <div className="">
-            <Link className="flex items-center gap-3">
-              <span className="flex items-end flex-col">
+          <div className="lg:w-full">
+            <Link className="flex items-center gap-3 justify-end">
+              <span className="hidden lg:flex items-end flex-col">
                 <span className="block text-sm font-medium text-black">Thomas Anree</span>
                 <span className="block text-xs font-medium text-secondary">UX Designer</span>
               </span>
               <div className="w-12 h-12 rounded-complete overflow-hidden">
                 <img className="w-full h-full object-cover" src={userImg} alt="user image" />
               </div>
-              <RiArrowDownSLine className="text-xl" />
+              <RiArrowDownSLine className="text-xl hidden lg:inline" />
             </Link>
           </div>
         </div>

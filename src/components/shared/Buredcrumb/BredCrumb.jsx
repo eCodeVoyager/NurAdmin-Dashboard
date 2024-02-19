@@ -9,12 +9,12 @@ const BredCrumb = ({pageName}) => {
                 </h2>
 
                 <nav>
-                  <ol className="flex items-center gap-2">
+                  <ul className="flex items-center gap-2">
                     <li>
                       <Link className="font-medium text-secondary" href="index.html">Dashboard /</Link>
                     </li>
                     <li className="text-primary">{pageName}</li>
-                  </ol>
+                  </ul>
                 </nav>
               </div>
   )

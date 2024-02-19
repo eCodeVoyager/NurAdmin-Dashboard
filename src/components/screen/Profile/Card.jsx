@@ -9,7 +9,7 @@ const Card = () => {
       <div className="relative z-20 h-35 md:h-65">
         <img src={coverPhoto} alt="profile cover" className="h-full w-full rounded-tl-sm rounded-tr-sm object-cover object-center" />
         <div className="absolute bottom-3 right-3 z-10 md:bottom-4 md:right-4">
-          <label for="cover" className="flex cursor-pointer items-center justify-center gap-2 rounded bg-primary px-2 py-1 text-sm font-medium text-white hover:bg-opacity-80 md:px-4">
+          <label htmlFor="cover" className="flex cursor-pointer items-center justify-center gap-2 rounded bg-primary px-2 py-1 text-sm font-medium text-white hover:bg-opacity-80 md:px-4">
             <input type="file" name="cover" id="cover" className="sr-only" />
             <span>
               <IoCameraOutline />
@@ -22,7 +22,7 @@ const Card = () => {
         <div className="relative z-30 mx-auto -mt-22 h-30 w-full max-w-30 rounded-full bg-white/20 p-1 backdrop-blur sm:h-44 sm:max-w-44 sm:p-3">
           <div className="relative drop-shadow-2">
             <img src={userPhoto} alt="profile" />
-            <label for="profile" className="absolute bottom-0 right-0 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 sm:bottom-2 sm:right-2">
+            <label htmlFor="profile" className="absolute bottom-0 right-0 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 sm:bottom-2 sm:right-2">
               <IoCameraOutline />
               <input type="file" name="profile" id="profile" className="sr-only" />
             </label>

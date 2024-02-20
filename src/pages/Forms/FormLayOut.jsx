@@ -1,6 +1,7 @@
 import React from 'react'
 import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import ContactForm from '../../components/FormLayout/ContactForm/ContactForm'
+import SignInForm from '../../components/FormLayout/SignInForm/SignInForm'
 
 const FormLayOut = () => {
   return (
@@ -10,20 +11,13 @@ const FormLayOut = () => {
       </div>
       <div className="grid grid-cols-1 gap-9 sm:grid-cols-2">
         <div className="flex flex-col gap-9">
-          <div class="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-6 py-4">
-              <h3 class="font-medium text-black">
-                Contact Form
-              </h3>
-            </div>
-            {/* contact form  */}
+          {/* Contact Form  */}
             <ContactForm />
-            {/* Sign In Form  */}
-            
-          </div>
-
         </div>
-        <div className="flex flex-col gap-9"></div>
+        <div className="flex flex-col gap-9">
+           {/* Sign In Form  */}
+           <SignInForm/>
+        </div>
       </div >
     </div >
   )

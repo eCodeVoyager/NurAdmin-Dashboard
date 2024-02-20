@@ -6,7 +6,7 @@ import CheckBox4 from '../CheckBoxs/CheckBox4/CheckBox4'
 
 const CheckBox = () => {
     return (
-        <div class="rounded-sm border border-stroke bg-white shadow-default ">
+        <div class="rounded-sm border border-stroke bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
             <div class="border-b border-stroke px-6 py-4 ">
                 <h3 class="font-medium text-black">
                     Checkbox and radio

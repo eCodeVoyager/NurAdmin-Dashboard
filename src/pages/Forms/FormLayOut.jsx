@@ -16,7 +16,10 @@ const FormLayOut = () => {
                 Contact Form
               </h3>
             </div>
+            {/* contact form  */}
             <ContactForm />
+            {/* Sign In Form  */}
+            
           </div>
 
         </div>

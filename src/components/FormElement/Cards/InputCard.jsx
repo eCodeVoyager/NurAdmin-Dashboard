@@ -13,15 +13,15 @@ const InputCard = () => {
             </div>
             <div class="flex flex-col gap-6 p-7">
                 <div>
-                    <DefaultInput />
+                    <DefaultInput label={"Default Input"} placeholder={"Default Input"} type={"text"} isRequired={false} />
                 </div>
 
                 <div>
-                    <ActiveInput />
+                    <ActiveInput label={"Active Input"} placeholder={"Active Input"} type={"text"} isRequired={false} />
                 </div>
 
                 <div>
-                    <DisableInput />
+                    <DisableInput label={"Disabled label"} placeholder={"Disabled label"} type={"text"} isRequired={false}/>
                 </div>
             </div>
         </div>

@@ -13,15 +13,15 @@ const TextAriaCard = () => {
       </div>
       <div class="flex flex-col gap-5 p-6">
         <div>
-          <DefaultTextAria />
+          <DefaultTextAria label={"Default textarea"} placeholder={"Default textarea"} />
         </div>
 
         <div>
-          <ActiveTextAria />
+          <ActiveTextAria label={"Active textarea"} placeholder={"Active textarea"} />
         </div>
 
         <div>
-          <DisAbleTextAria />
+          <DisAbleTextAria label={"Disabled textarea"} placeholder={"Disabled textarea"} />
         </div>
       </div>
     </div>

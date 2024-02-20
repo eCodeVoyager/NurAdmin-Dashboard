@@ -2,6 +2,7 @@ import React from 'react'
 import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import ContactForm from '../../components/FormLayout/ContactForm/ContactForm'
 import SignInForm from '../../components/FormLayout/SignInForm/SignInForm'
+import SignUpForm from '../../components/FormLayout/SignUpForm/SignUpForm'
 
 const FormLayOut = () => {
   return (
@@ -17,6 +18,9 @@ const FormLayOut = () => {
         <div className="flex flex-col gap-9">
            {/* Sign In Form  */}
            <SignInForm/>
+
+           {/* Sign Up Form  */}
+           <SignUpForm/>
         </div>
       </div >
     </div >

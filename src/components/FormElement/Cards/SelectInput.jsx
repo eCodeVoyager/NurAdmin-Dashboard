@@ -1,5 +1,7 @@
 import React from 'react'
 import SelectInput1 from '../SelectInputs/SelectInput1/SelectInput1'
+import MultiSelect from '../SelectInputs/MultiSelect/MultiSelect'
+import CountrySelect from '../SelectInputs/CountrySelect/CountrySelect'
 
 const SelectInput = () => {
     return (
@@ -12,6 +14,8 @@ const SelectInput = () => {
                 </div>
                 <div class="flex flex-col gap-5 p-6">
                     <SelectInput1 />
+                    <CountrySelect/>
+                    <MultiSelect/>
                 </div>
             </div>
         </>

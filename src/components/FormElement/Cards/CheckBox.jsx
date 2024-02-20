@@ -2,6 +2,7 @@ import React from 'react'
 import CheckBox1 from '../CheckBoxs/CheckBox1/CheckBox1'
 import CheckBox2 from '../CheckBoxs/CheckBox2/CheckBox2'
 import CheckBox3 from '../CheckBoxs/CheckBox3/CheckBox3'
+import CheckBox4 from '../CheckBoxs/CheckBox4/CheckBox4'
 
 const CheckBox = () => {
     return (
@@ -15,6 +16,7 @@ const CheckBox = () => {
                 <CheckBox1 />
                 <CheckBox2/>
                 <CheckBox3/>
+                <CheckBox4/>
             </div>
         </div>
     )

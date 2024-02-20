@@ -6,6 +6,7 @@ import ToggleSwitch from '../../components/FormElement/Cards/ToggleSwitch'
 import DateTimeCard from '../../components/FormElement/Cards/DateTimeCard'
 import FileUpload from '../../components/FormElement/Cards/FileUpload'
 import CheckBox from '../../components/FormElement/Cards/CheckBox'
+import SelectInput from '../../components/FormElement/Cards/SelectInput'
 
 const FormElement = () => {
   return (
@@ -23,6 +24,7 @@ const FormElement = () => {
           <div className="flex flex-col gap-9">
             <TextAriaCard/>
             <CheckBox/>
+            <SelectInput/>
           </div>
         </div>
       </div>

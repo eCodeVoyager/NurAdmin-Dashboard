@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import BredCrumb from '../components/shared/Buredcrumb/BredCrumb';
 import data from '../lib/FakeDB';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { FiEye, FiDownload } from "react-icons/fi";
+import { AiOutlineDelete } from "react-icons/ai";
 const Tables = () => {
     const [tableData, setTableData] = useState(data);
     const [entriesPerPage, setEntriesPerPage] = useState(10); // Updated to show 10 data per page
@@ -86,7 +88,21 @@ const Tables = () => {
                                             <td className='text-sm font-normal text-gray-700 py-4'>{item.BDay}</td>
                                             <td className='text-sm font-normal text-gray-700 py-4'>{item.Email}</td>
                                             <td className='text-sm font-normal text-gray-700 py-4'>{item.Address}</td>
-                                            <td className='text-sm font-normal text-gray-700 pr-[1.125rem] py-4'>{item.Status}</td>
+                                            <td className='text-sm font-normal text-gray-700  py-4'>{item.Status}</td>
+                                            <td className='text-sm font-normal text-gray-700 pr-[1.125rem] py-4'>
+                                                <div class="flex items-center justify-end space-x-3">
+                                                    <button class="hover:text-primary">
+                                                        <FiEye className='text-lg' />
+                                                    </button>
+                                                    <button class="hover:text-primary">
+                                                        <AiOutlineDelete className='text-lg' />
+                                                    </button>
+                                                    <button class="hover:text-primary">
+                                                        <FiDownload className='text-lg' />
+                                                    </button>
+                                                </div>
+                                            </td>
+
                                         </tr>
                                     ))}
                                 </tbody>

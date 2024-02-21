@@ -1,20 +1,68 @@
-import React from 'react'
-import BredCrumb from '../components/shared/Buredcrumb/BredCrumb'
-import data from '../lib/FakeDB'
+import React, { useState } from 'react';
+import BredCrumb from '../components/shared/Buredcrumb/BredCrumb';
+import data from '../lib/FakeDB';
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 const Tables = () => {
-    const [tableData, setTableData] = React.useState(data)
+    const [tableData, setTableData] = useState(data);
+    const [entriesPerPage, setEntriesPerPage] = useState(10); // Updated to show 10 data per page
+    const [searchQuery, setSearchQuery] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
 
+    // Handler for changing the number of entries per page
+    const handleEntriesPerPageChange = (e) => {
+        setEntriesPerPage(parseInt(e.target.value, 10)); // Parse the selected value to an integer
+        setCurrentPage(1); // Reset current page when entries per page changes
+    };
+
+    // Handler for search input change
+    const handleSearchChange = (e) => {
+        setSearchQuery(e.target.value);
+        setCurrentPage(1); // Reset current page when search query changes
+    };
+
+    // Filter data based on search query
+    const filteredData = tableData.filter(item =>
+        item.Name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.Position.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.BDay.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.Email.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.Address.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.Status.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    // Calculate the total number of pages based on the number of entries per page
+    const totalPages = Math.ceil(filteredData.length / entriesPerPage);
+
+    // Slice the data to display only the entries for the current page
+    const startIndex = (currentPage - 1) * entriesPerPage;
+    const endIndex = startIndex + entriesPerPage;
+    const paginatedData = filteredData.slice(startIndex, endIndex);
+
+    // Generate an array of page numbers
+    const pageNumbers = [];
+    for (let i = 1; i <= totalPages; i++) {
+        pageNumbers.push(i);
+    }
 
     return (
         <div className='container_fluid'>
             <div className="mx-auto max-w-242.5">
                 <BredCrumb pageName={"Data Tables "} />
 
-                <div class="flex flex-col gap-5 md:gap-7 2xl:gap-10">
-                    <div class="rounded-sm border border-stroke bg-white shadow-default">
-                        <div className="px-[1.875rem] py-[1.125rem] border-b">
+                <div className="flex flex-col gap-5 md:gap-7 2xl:gap-10">
+                    <div className="rounded-sm border border-stroke bg-white shadow-default">
+                        <div className="px-[1.875rem] py-[1.125rem] border-b flex justify-between">
                             <div className="w-[25rem]">
-                                <input type="search" placeholder='Search...' className='px-[1.25rem] h-[46px] w-full border focus:outline-none' />
+                                <input type="search" placeholder='Search...' value={searchQuery} onChange={handleSearchChange} className='px-[1.25rem] h-[46px] w-full border focus:outline-none rounded-md' />
+                            </div>
+                            <div className="flex gap-2 items-center">
+                                <select name="entriesPerPage" value={entriesPerPage} onChange={handleEntriesPerPageChange} className='cursor-pointer focus:border-none focus:outline-none'>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value={filteredData.length}>All</option>
+                                </select>
+                                <p className="capitalize p-0 text-sm font-medium">Entries per page</p>
                             </div>
                         </div>
                         <div className="w-full">
@@ -31,29 +79,43 @@ const Tables = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-
-                                    {
-                                        tableData.map((item, index) => (
-                                            <tr key={index} className='border'>
-                                                <td className='text-sm font-normal text-gray-700 pl-[1.875rem] py-4'>{item.Name}</td>
-                                                <td className='text-sm font-normal text-gray-700 py-4'>{item.Position}</td>
-                                                <td className='text-sm font-normal text-gray-700 py-4'>{item.BDay}</td>
-                                                <td className='text-sm font-normal text-gray-700 py-4'>{item.Email}</td>
-                                                <td className='text-sm font-normal text-gray-700 py-4'>{item.Address}</td>
-                                                <td className='text-sm font-normal text-gray-700 pr-[1.125rem] py-4'>{item.Status}</td>
-                                            </tr>
-                                        ))
-                                    }
-
-
+                                    {paginatedData.map((item, index) => (
+                                        <tr key={index} className='border'>
+                                            <td className='text-sm font-normal text-gray-700 pl-[1.875rem] py-4'>{item.Name}</td>
+                                            <td className='text-sm font-normal text-gray-700 py-4'>{item.Position}</td>
+                                            <td className='text-sm font-normal text-gray-700 py-4'>{item.BDay}</td>
+                                            <td className='text-sm font-normal text-gray-700 py-4'>{item.Email}</td>
+                                            <td className='text-sm font-normal text-gray-700 py-4'>{item.Address}</td>
+                                            <td className='text-sm font-normal text-gray-700 pr-[1.125rem] py-4'>{item.Status}</td>
+                                        </tr>
+                                    ))}
                                 </tbody>
                             </table>
                         </div>
+                        {/* Pagination */}
+                        <div className="flex justify-between px-[1.875rem] py-[2rem]">
+                            <div className='flex items-center'>
+                                <button onClick={() => setCurrentPage(prevPage => Math.max(prevPage - 1, 1))} disabled={currentPage === 1} className="px-3 py-1  text-gray-600 rounded-md disabled:opacity-50"><IoIosArrowBack /></button>
+
+                                {pageNumbers.map(number => (
+                                    <button key={number} onClick={() => setCurrentPage(number)} className={`mx-1 px-3 py-1 rounded-md ${currentPage === number ? 'bg-primary text-white' : 'text-blue-500'}`}>
+                                        {number}
+                                    </button>
+                                ))}
+                                <button onClick={() => setCurrentPage(prevPage => Math.min(prevPage + 1, totalPages))} disabled={currentPage === totalPages} className="px-3 py-1  text-gray-600 rounded-md disabled:opacity-50"><IoIosArrowForward /></button>
+
+                            </div>
+                            <div className="">
+                                <span>Showing {currentPage} to {entriesPerPage} of {tableData.length} entries</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Tables
+export default Tables;

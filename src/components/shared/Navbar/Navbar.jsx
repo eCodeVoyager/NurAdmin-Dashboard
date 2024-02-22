@@ -54,8 +54,8 @@ const Navbar = () => {
           <div className="lg:w-full">
             <Link className="flex items-center gap-3 justify-end">
               <span className="hidden lg:flex items-end flex-col">
-                <span className="block text-sm font-medium text-black">Thomas Anree</span>
-                <span className="block text-xs font-medium text-secondary">UX Designer</span>
+                <span className="block text-sm font-medium text-black">Fayshal Rana</span>
+                <span className="block text-xs font-medium text-secondary">Developer</span>
               </span>
               <div className="w-12 h-12 rounded-complete overflow-hidden">
                 <img className="w-full h-full object-cover" src={userImg} alt="user image" />

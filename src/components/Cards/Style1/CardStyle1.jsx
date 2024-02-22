@@ -4,7 +4,7 @@ const CardStyle1 = ({data}) => {
   return (
 <div class="rounded-sm border border-stroke bg-white shadow-default">
                 <div class="flex items-center gap-3 px-6 py-5">
-                  <div class="h-10 w-10 rounded-full overflow-hidden">
+                  <div class="h-10 w-10 rounded-full overflow-hidden ">
                     <img src={data.userImage}alt="User"/>
                   </div>
                   <div>

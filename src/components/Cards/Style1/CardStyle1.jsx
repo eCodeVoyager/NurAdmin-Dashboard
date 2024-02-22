@@ -21,11 +21,10 @@ const CardStyle1 = ({data}) => {
 
                 <div class="p-6">
                   <h4 class="mb-3 text-xl font-semibold text-black">
-                    <a href="#">Card Title here</a>
+                    <a href="#">{data.cardTitle}</a>
                   </h4>
                   <p class="font-medium text-secondary">
-                    Lorem ipsum dolor sit amet, vehiculaum ero felis loreum
-                    fitiona fringilla goes scelerisque Interdum et.
+                    {data.cardDescription}
                   </p>
                 </div>
               </div>

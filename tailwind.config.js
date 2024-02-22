@@ -12,6 +12,8 @@ export default {
         foreGround: "#FFFFFF",
         menuHover: "#323A48",
         subMenu: "#DAE0EA",
+        lightGreen: "#27C08D"
+        
       },
       padding: {
         22: "100px",

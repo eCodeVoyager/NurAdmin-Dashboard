@@ -27,6 +27,15 @@ import WarningBadge3 from '../../components/Badge/Style3/WarningBadge3'
 import DangerBadge3 from '../../components/Badge/Style3/DangerBadge3'
 import SuccessBadge3 from '../../components/Badge/Style3/SuccessBadge3'
 import InfoBadge3 from '../../components/Badge/Style2/InfoBadge3'
+import PrimaryBadge4 from '../../components/Badge/Style4/PrimaryBadge4'
+import SecondaryBadge4 from '../../components/Badge/Style4/SecondaryBadge4'
+import DarkBadge4 from '../../components/Badge/Style4/DarkBadge4'
+import LightBadge4 from '../../components/Badge/Style4/LightBadge4'
+import WarningBadge4 from '../../components/Badge/Style4/WarningBadge4'
+import DangerBadge4 from '../../components/Badge/Style4/DangerBadge4'
+import GrayBadge4 from '../../components/Badge/Style4/GrayBadge4'
+import SuccessBadge4 from '../../components/Badge/Style4/SuccessBadge4'
+import InfoBadge4 from '../../components/Badge/Style4/InfoBadge4'
 
 const Badge = () => {
   return (
@@ -95,6 +104,27 @@ const Badge = () => {
                 <SuccessBadge3 />
                 <InfoBadge3 />
               </div>
+            </div>
+          </div>
+          {/* Badge style three  */}
+          <div className="rounded-sm border border-stroke bg-white shadow-default">
+            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
+              <h3 class="font-medium text-black">
+                Badge Style 4
+              </h3>
+            </div>
+            <div class="p-4 sm:p-6 xl:p-10">
+            <div class="flex flex-wrap items-center gap-2 sm:gap-4.5">
+                    <PrimaryBadge4/>
+                    <SecondaryBadge4/>
+                    <DarkBadge4/>
+                    <GrayBadge4/>
+                    <LightBadge4/>
+                    <WarningBadge4/>
+                    <DangerBadge4/>
+                    <SuccessBadge4/>
+                    <InfoBadge4/>
+                  </div>
             </div>
           </div>
         </div>

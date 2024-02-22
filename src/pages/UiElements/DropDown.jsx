@@ -8,8 +8,9 @@ const DropDown = () => {
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Dropdowns"} />
 
-        {/* Dropdown style 1  */}
         <div className="flex flex-col gap-7">
+
+          {/* Dropdown style 1  */}
           <div className="rounded-sm border border-stroke bg-white shadow-default">
             <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
               <h3 class="font-medium text-black">
@@ -20,7 +21,22 @@ const DropDown = () => {
               <DropdownStyle1 />
             </div>
           </div>
+
+          {/* Dropdown style 1  */}
+
+          <div className="rounded-sm border border-stroke bg-white shadow-default">
+            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
+              <h3 class="font-medium text-black">
+                Dropdowns Style 2
+              </h3>
+            </div>
+            <div class="p-4 sm:p-6 xl:p-10">
+              <DropdownStyle1 dropBoxClass={"bg-primary"} dropItemClass={"text-white/50 hover:text-white hover:bg-transparent"} />
+            </div>
+          </div>
         </div>
+
+
       </div>
     </div>
   )

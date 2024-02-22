@@ -18,13 +18,13 @@ const DropdownStyle1 = ({ buttonClassName, dropBoxClass, dropItemClass }) => {
     }, [buttonBlur, menuBlur]);
 
     return (
-        <div className={cn("relative mb-52 inline-block", buttonClassName)}>
+        <div className={cn("relative mb-52 inline-block")}>
             <a
                 onClick={() => setOpen(!open)}
                 onBlur={() => setButtonBlur(true)}
                 onFocus={() => setButtonBlur(false)}
                 href="#"
-                className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 font-medium text-white hover:bg-opacity-95"
+                className={cn("inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 font-medium text-white hover:bg-opacity-95", buttonClassName)}
             >
                 Dropdown Button
                 <IoIosArrowDown className={`text-xl duration-300 ${open ? "rotate-180" : ""}`} />

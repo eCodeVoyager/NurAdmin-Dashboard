@@ -22,7 +22,7 @@ const DropDown = () => {
             </div>
           </div>
 
-          {/* Dropdown style 1  */}
+          {/* Dropdown style 2  */}
 
           <div className="rounded-sm border border-stroke bg-white shadow-default">
             <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
@@ -32,6 +32,19 @@ const DropDown = () => {
             </div>
             <div class="p-4 sm:p-6 xl:p-10">
               <DropdownStyle1 dropBoxClass={"bg-primary"} dropItemClass={"text-white/50 hover:text-white hover:bg-transparent"} />
+            </div>
+          </div>
+
+          {/* Dropdown style 3  */}
+
+          <div className="rounded-sm border border-stroke bg-white shadow-default">
+            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
+              <h3 class="font-medium text-black">
+                Dropdowns Style 3
+              </h3>
+            </div>
+            <div class="p-4 sm:p-6 xl:p-10">
+              <DropdownStyle1 buttonClassName={"bg-dark"} dropBoxClass={"bg-dark"} dropItemClass={"text-white/50 hover:text-white hover:bg-transparent"} />
             </div>
           </div>
         </div>

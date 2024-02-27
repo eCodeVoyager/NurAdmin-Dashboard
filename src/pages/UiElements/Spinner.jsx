@@ -1,6 +1,7 @@
 import React from 'react'
 import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import SpinnerStyle1 from '../../components/Spinners/SpinnerStyle1'
+import SpinnerStyle2 from '../../components/Spinners/SpinnerStyle2'
 
 const Spinner = () => {
   return (
@@ -10,6 +11,7 @@ const Spinner = () => {
 
 
         <div className="flex flex-col gap-7">
+          {/* spinner style one  */}
           <div class="rounded-sm border border-stroke bg-white shadow-default">
             <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-9">
               <h3 class="font-medium text-black">
@@ -18,7 +20,21 @@ const Spinner = () => {
             </div>
 
             <div class="p-4 sm:p-6 xl:p-9">
-            <SpinnerStyle1/>
+              <SpinnerStyle1 />
+            </div>
+          </div>
+
+
+          {/* spinner style one  */}
+          <div class="rounded-sm border border-stroke bg-white shadow-default">
+            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-9">
+              <h3 class="font-medium text-black">
+                Style 2
+              </h3>
+            </div>
+
+            <div class="p-4 sm:p-6 xl:p-9">
+              <SpinnerStyle2 />
             </div>
           </div>
         </div>

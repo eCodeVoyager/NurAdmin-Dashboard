@@ -12,28 +12,28 @@ const Spinner = () => {
 
         <div className="flex flex-col gap-7">
           {/* spinner style one  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-9">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-default">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-9">
+              <h3 className="font-medium text-black">
                 Style 1
               </h3>
             </div>
 
-            <div class="p-4 sm:p-6 xl:p-9">
+            <div className="p-4 sm:p-6 xl:p-9">
               <SpinnerStyle1 />
             </div>
           </div>
 
 
           {/* spinner style one  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-9">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-default">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-9">
+              <h3 className="font-medium text-black">
                 Style 2
               </h3>
             </div>
 
-            <div class="p-4 sm:p-6 xl:p-9">
+            <div className="p-4 sm:p-6 xl:p-9">
               <SpinnerStyle2 />
             </div>
           </div>

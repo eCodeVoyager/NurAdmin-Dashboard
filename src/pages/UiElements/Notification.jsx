@@ -57,58 +57,58 @@ const Notification = () => {
 
         <div className="flex flex-col gap-7">
           {/* Notification style one  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default ">
-            <div class="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-default ">
+            <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Notifications Style 1
               </h3>
             </div>
 
-            <div class="p-4 sm:p-6 xl:p-10">
+            <div className="p-4 sm:p-6 xl:p-10">
               <NotificationStyle1 />
             </div>
           </div>
 
           {/* Notification style two  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default ">
-            <div class="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-default ">
+            <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Notifications Style two
               </h3>
             </div>
 
-            <div class="p-4 sm:p-6 xl:p-10">
+            <div className="p-4 sm:p-6 xl:p-10">
               <NotificationStyle2 />
             </div>
           </div>
 
 
           {/* Notification style three  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default ">
-            <div class="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-default ">
+            <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Notifications Style three
               </h3>
             </div>
 
-            <div class="p-4 sm:p-6 xl:p-10">
+            <div className="p-4 sm:p-6 xl:p-10">
               <NotificationStyle3 />
             </div>
           </div>
 
 
           {/* Notification style four  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default ">
-            <div class="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-default ">
+            <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Notifications Style three
               </h3>
             </div>
 
-            <div class="p-4 sm:p-6 xl:p-10">
+            <div className="p-4 sm:p-6 xl:p-10">
               <div className="flex flex-col gap-5">
                 {
-                  userData.map((user, idx) => <NotificationStyle4 mainBoxClass={idx === 3 ? "border-red-500" : ""} activeSignClass={idx === 3? "bg-red-500":""} user={user} />)
+                  userData.map((user, idx) => <NotificationStyle4 mainBoxclassName={idx === 3 ? "border-red-500" : ""} activeSignclassName={idx === 3? "bg-red-500":""} user={user} />)
                 }
 
               </div>

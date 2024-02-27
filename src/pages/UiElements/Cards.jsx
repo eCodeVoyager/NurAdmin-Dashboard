@@ -45,7 +45,7 @@ const Cards = () => {
             ))
           }
         </div>
-        <h2 class="mb-7 mt-10 text-[26px] font-bold text-black">
+        <h2 className="mb-7 mt-10 text-[26px] font-bold text-black">
           Cards
         </h2>
         {/* Cards  style Two */}
@@ -56,7 +56,7 @@ const Cards = () => {
             ))
           }
         </div>
-        <h2 class="mb-7 mt-10 text-[26px] font-bold text-black">
+        <h2 className="mb-7 mt-10 text-[26px] font-bold text-black">
           Cards
         </h2>
         {/* Cards  style Three */}

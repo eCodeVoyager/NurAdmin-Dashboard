@@ -52,7 +52,7 @@ const MultiSelect = () => {
         <>
 
             <div className="w-full flex flex-col mx-auto">
-                <label class="mb-3 block text-sm font-medium text-black select-none">
+                <label className="mb-3 block text-sm font-medium text-black select-none">
                     Multiselect Dropdown
                 </label>
                 <input name="values" type="hidden" value={selected.map((option) => option.value)} />

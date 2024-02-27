@@ -11,8 +11,8 @@ const Buttons = () => {
 
         {/* Normal Buttons  */}
         <div className="mb-10 rounded-sm border border-stroke bg-white shadow-default">
-          <div class="border-b border-stroke px-7 py-4">
-            <h3 class="font-medium text-black">
+          <div className="border-b border-stroke px-7 py-4">
+            <h3 className="font-medium text-black">
               Normal Button
             </h3>
           </div>
@@ -40,8 +40,8 @@ const Buttons = () => {
 
         {/* Buttons with Icon  */}
         <div className="mb-10 rounded-sm border border-stroke bg-white shadow-default">
-          <div class="border-b border-stroke px-7 py-4">
-            <h3 class="font-medium text-black">
+          <div className="border-b border-stroke px-7 py-4">
+            <h3 className="font-medium text-black">
               Button With Icon
             </h3>
           </div>

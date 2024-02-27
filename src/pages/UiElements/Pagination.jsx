@@ -13,40 +13,40 @@ const Pagination = () => {
 
         <div className="flex flex-col gap-7">
           {/* pagination style one  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7.5">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-default">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7.5">
+              <h3 className="font-medium text-black">
                 Pagination Style 1
               </h3>
             </div>
 
-            <div class="p-4 sm:p-6 xl:p-7">
+            <div className="p-4 sm:p-6 xl:p-7">
               <PaginationStyle1 />
             </div>
           </div>
 
           {/* pagination style two  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7.5">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-default">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7.5">
+              <h3 className="font-medium text-black">
                 Pagination Style 2
               </h3>
             </div>
 
-            <div class="p-4 sm:p-6 xl:p-7">
+            <div className="p-4 sm:p-6 xl:p-7">
               <PaginationStyle2 />
             </div>
           </div>
 
           {/* pagination style three  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7.5">
-              <h3 class="font-medium text-black ">
+          <div className="rounded-sm border border-stroke bg-white shadow-default">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7.5">
+              <h3 className="font-medium text-black ">
                 Pagination Style 3
               </h3>
             </div>
 
-            <div class="p-4 sm:p-6 xl:p-7">
+            <div className="p-4 sm:p-6 xl:p-7">
               <PaginationStyle3 />
             </div>
           </div>

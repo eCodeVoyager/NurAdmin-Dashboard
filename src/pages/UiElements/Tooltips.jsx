@@ -17,15 +17,15 @@ const Tooltips = () => {
 
         <div className="flex flex-col gap-7">
           {/* Tooltip style one  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-default">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Tooltips Style 1
               </h3>
             </div>
 
-            <div class="p-4 sm:p-5 xl:p-7">
-              <div class="-mx-4 flex flex-wrap justify-center">
+            <div className="p-4 sm:p-5 xl:p-7">
+              <div className="-mx-4 flex flex-wrap justify-center">
                 {/* Tooltip on Top  */}
                 <TooltipOnTop />
 
@@ -44,15 +44,15 @@ const Tooltips = () => {
 
 
           {/* Tooltip style one  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-md">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-md">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Tooltips Style 1
               </h3>
             </div>
 
-            <div class="p-4 sm:p-5 xl:p-7">
-              <div class="-mx-4 flex flex-wrap justify-center">
+            <div className="p-4 sm:p-5 xl:p-7">
+              <div className="-mx-4 flex flex-wrap justify-center">
                 {/* Tooltip on Top  */}
                 <TooltipOnTop2 />
 

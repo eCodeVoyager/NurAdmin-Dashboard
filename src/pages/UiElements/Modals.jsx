@@ -25,10 +25,10 @@ const closeModalThree = () => {
         <BredCrumb pageName={"Modals"} />
 
 
-        <div class="rounded-sm border border-stroke bg-white p-10 shadow-default dark:border-strokedark dark:bg-boxdark">
-          <div class="flex flex-wrap justify-center gap-5">
+        <div className="rounded-sm border border-stroke bg-white p-10 shadow-default dark:border-strokedark dark:bg-boxdark">
+          <div className="flex flex-wrap justify-center gap-5">
             <div>
-              <button onClick={() => setPopupOne(!popupOne)} class="rounded-md bg-primary px-9 py-3 font-medium text-white">
+              <button onClick={() => setPopupOne(!popupOne)} className="rounded-md bg-primary px-9 py-3 font-medium text-white">
                 Modal 1
               </button>
               {popupOne && <Modal1 closeModalOne={closeModalOne}/>
@@ -36,7 +36,7 @@ const closeModalThree = () => {
               }
             </div>
             <div>
-              <button onClick={() => setPopupTwo(!popupTwo)} class="rounded-md bg-primary px-9 py-3 font-medium text-white">
+              <button onClick={() => setPopupTwo(!popupTwo)} className="rounded-md bg-primary px-9 py-3 font-medium text-white">
                 Modal 2
               </button>
               {popupTwo && <Modal2 closeModalTwo={closeModalTwo}/>
@@ -44,7 +44,7 @@ const closeModalThree = () => {
               }
             </div>
             <div>
-              <button onClick={()=>setPopupThree(!popupThree)} class="rounded-md bg-primary px-9 py-3 font-medium text-white">
+              <button onClick={()=>setPopupThree(!popupThree)} className="rounded-md bg-primary px-9 py-3 font-medium text-white">
                 Modal 3
               </button>
               {

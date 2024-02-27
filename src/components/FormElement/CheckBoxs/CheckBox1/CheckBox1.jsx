@@ -3,8 +3,8 @@ import './CheckBox1.css'
 const CheckBox1 = () => {
     return (
         <div>
-            <label class="cyberpunk-checkbox-label">
-                <input type="checkbox" class="cyberpunk-checkbox"/>
+            <label className="cyberpunk-checkbox-label">
+                <input type="checkbox" className="cyberpunk-checkbox"/>
                     Checkbox text</label>
         </div>
     )

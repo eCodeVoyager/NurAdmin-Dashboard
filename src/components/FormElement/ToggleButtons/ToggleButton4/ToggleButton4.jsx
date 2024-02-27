@@ -3,9 +3,9 @@ import './ToggleButton4.css'
 const ToggleButton4 = () => {
     return (
         <div>
-            <label class="toggle-switch">
+            <label className="toggle-switch">
                 <input type="checkbox"/>
-                    <span class="toggle-switch__slider"></span>
+                    <span className="toggle-switch__slider"></span>
             </label>
         </div>
     )

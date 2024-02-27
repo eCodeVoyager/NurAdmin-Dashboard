@@ -5,13 +5,13 @@ import DisableInput from '../InputFields/DisableInput'
 
 const InputCard = () => {
     return (
-        <div class="rounded-sm border border-stroke bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-            <div class="border-b border-stroke px-6 py-4">
-                <h3 class="font-medium text-black">
+        <div className="rounded-sm border border-stroke bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+            <div className="border-b border-stroke px-6 py-4">
+                <h3 className="font-medium text-black">
                     Input Fields
                 </h3>
             </div>
-            <div class="flex flex-col gap-6 p-7">
+            <div className="flex flex-col gap-6 p-7">
                 <div>
                     <DefaultInput label={"Default Input"} placeholder={"Default Input"} type={"text"} isRequired={false} />
                 </div>

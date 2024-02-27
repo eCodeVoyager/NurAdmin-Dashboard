@@ -7,37 +7,37 @@ import FormButton from '../FormButton/FormButton'
 const ContactForm = () => {
     return (
 
-        <div class="rounded-sm border border-stroke bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-            <div class="border-b border-stroke px-6 py-4">
-                <h3 class="font-medium text-black">
+        <div className="rounded-sm border border-stroke bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+            <div className="border-b border-stroke px-6 py-4">
+                <h3 className="font-medium text-black">
                     Contact Form
                 </h3>
             </div>
             <form action="#">
-                <div class="p-6">
-                    <div class="mb-4 flex flex-col gap-6 xl:flex-row">
-                        <div class="w-full xl:w-1/2">
+                <div className="p-6">
+                    <div className="mb-4 flex flex-col gap-6 xl:flex-row">
+                        <div className="w-full xl:w-1/2">
                             <DefaultInput label={"First name"} placeholder={"Enter your first name"} type={"text"} isRequired={false} />
                         </div>
 
-                        <div class="w-full xl:w-1/2">
+                        <div className="w-full xl:w-1/2">
                             <DefaultInput label={"Last name"} placeholder={"Enter your last name"} type={"text"} isRequired={false} />
                         </div>
                     </div>
 
-                    <div class="mb-4">
+                    <div className="mb-4">
                         <DefaultInput label={"Email *"} placeholder={"Enter your email address"} type={"email"} isRequired={true} />
                     </div>
 
-                    <div class="mb-4">
+                    <div className="mb-4">
                         <DefaultInput label={"Subject"} placeholder={"Enter subject"} type={"text"} isRequired={false} />
                     </div>
 
-                    <div class="mb-4">
+                    <div className="mb-4">
                         <SelectInput1 />
                     </div>
 
-                    <div class="mb-6">
+                    <div className="mb-6">
                         <DefaultTextAria label={"Message "} placeholder={"Type your message"} />
                     </div>
 

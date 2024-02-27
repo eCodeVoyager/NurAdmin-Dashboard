@@ -13,22 +13,22 @@ const Lists = () => {
           {/* list Style one  */}
           <div className="rounded-sm border border-stroke bg-white shadow-default">
             <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-9">
-              <h3 class="font-medium text-black">
+              <h3 className="font-medium text-black">
                 Style 1
               </h3>
             </div>
-            <div class="p-4 sm:p-6 xl:p-9">
+            <div className="p-4 sm:p-6 xl:p-9">
               <ListStyle1 />
             </div>
           </div>
           {/* list Style Two  */}
           <div className="rounded-sm border border-stroke bg-white shadow-default">
             <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-9">
-              <h3 class="font-medium text-black">
+              <h3 className="font-medium text-black">
                 Style 2
               </h3>
             </div>
-            <div class="p-4 sm:p-6 xl:p-9">
+            <div className="p-4 sm:p-6 xl:p-9">
               <ListStyle2 />
             </div>
           </div>
@@ -36,11 +36,11 @@ const Lists = () => {
           {/* list Style Three  */}
           <div className="rounded-sm border border-stroke bg-white shadow-default">
             <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-9">
-              <h3 class="font-medium text-black">
+              <h3 className="font-medium text-black">
                 Style 3
               </h3>
             </div>
-            <div class="p-4 sm:p-6 xl:p-9">
+            <div className="p-4 sm:p-6 xl:p-9">
               <ListStyle3 />
               <ListStyle3 />
               <ListStyle3 />

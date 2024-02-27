@@ -38,13 +38,17 @@ const Navbar = () => {
 
             <li>
               <Link className="relative flex h-8 bg-backGround w-8 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary" href="#" >
-
+                <span class="absolute -top-0.5 right-0 z-10 h-2 w-2 rounded-full bg-red-600">
+                  <span class="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75"></span>
+                </span>
                 <BsBell className="text-xl" />
               </Link>
             </li>
             <li>
               <Link className="relative flex h-8 bg-backGround w-8 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary" href="#" >
-
+              <span class="absolute -top-0.5 right-0 z-10 h-2 w-2 rounded-full bg-red-600">
+                  <span class="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75"></span>
+                </span>
                 <BsChatDots className="text-xl" />
               </Link>
             </li>

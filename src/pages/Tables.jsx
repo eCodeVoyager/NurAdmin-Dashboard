@@ -57,9 +57,9 @@ const Tables = () => {
                     <BredCrumb pageName={"Data Tables "} />
 
                     <div className="flex flex-col gap-5 md:gap-7 2xl:gap-10">
-                        <div className="rounded-sm border border-stroke bg-white shadow-default">
-                            <div className="px-[1.875rem] py-[1.125rem] border-b flex justify-between">
-                                <div className="w-[25rem]">
+                        <div className="rounded-sm border border-stroke bg-white shadow-default  overflow-x-auto">
+                            <div className="px-[1.875rem] py-[1.125rem] border-b flex justify-between w-[45rem] md:w-auto">
+                                <div className="w-[15rem] md:w-[25rem]">
                                     <input type="search" placeholder='Search...' value={searchQuery} onChange={handleSearchChange} className='px-[1.25rem] h-[46px] w-full border focus:outline-none rounded-md' />
                                 </div>
                                 <div className="flex gap-2 items-center">
@@ -69,7 +69,7 @@ const Tables = () => {
                                         <option value="20">20</option>
                                         <option value={filteredData.length}>All</option>
                                     </select>
-                                    <p className="capitalize p-0 text-sm font-medium">Entries per page</p>
+                                    <p className="capitalize p-0 text-sm font-medium whitespace-nowrap">Entries per page</p>
                                 </div>
                             </div>
                             <div className="w-full">
@@ -88,13 +88,13 @@ const Tables = () => {
                                     <tbody>
                                         {paginatedData.map((item, index) => (
                                             <tr key={index} className='border'>
-                                                <td className='text-sm font-normal text-gray-700 pl-[1.875rem] py-4'>{item.Name}</td>
-                                                <td className='text-sm font-normal text-gray-700 py-4'>{item.Position}</td>
-                                                <td className='text-sm font-normal text-gray-700 py-4'>{item.BDay}</td>
-                                                <td className='text-sm font-normal text-gray-700 py-4'>{item.Email}</td>
-                                                <td className='text-sm font-normal text-gray-700 py-4'>{item.Address}</td>
-                                                <td className='text-sm font-normal text-gray-700  py-4'>{item.Status}</td>
-                                                <td className='text-sm font-normal text-gray-700 pr-[1.125rem] py-4'>
+                                                <td className='whitespace-nowrap text-sm font-normal text-gray-700 pl-[1.875rem] py-4'>{item.Name}</td>
+                                                <td className='whitespace-nowrap text-sm font-normal text-gray-700 py-4'>{item.Position}</td>
+                                                <td className='whitespace-nowrap text-sm font-normal text-gray-700 py-4'>{item.BDay}</td>
+                                                <td className='whitespace-nowrap text-sm font-normal text-gray-700 py-4'>{item.Email}</td>
+                                                <td className='whitespace-nowrap text-sm font-normal text-gray-700 py-4'>{item.Address}</td>
+                                                <td className='whitespace-nowrap text-sm font-normal text-gray-700  py-4'>{item.Status}</td>
+                                                <td className='whitespace-nowrap text-sm font-normal text-gray-700 pr-[1.125rem] py-4'>
                                                     <div class="flex items-center justify-end space-x-3">
                                                         <button class="hover:text-primary">
                                                             <FiEye className='text-lg' />

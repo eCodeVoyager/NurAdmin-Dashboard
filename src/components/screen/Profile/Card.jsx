@@ -3,26 +3,26 @@ import coverPhoto from '../../../assets/images/cover-01.png'
 import userPhoto from '../../../assets/images/user-06.png'
 import { IoCameraOutline } from "react-icons/io5";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaDribbble, FaGithub } from "react-icons/fa";
-const Card = ({user}) => {
+const Card = ({ user }) => {
 
 
 
   return (
     <div className="overflow-hidden rounded-sm border border-stroke bg-white shadow-default">
-      <div className="relative z-20 h-35 md:h-65">
+      <div className="relative z-20 h-36 md:h-64">
         <img src={coverPhoto} alt="profile cover" className="h-full w-full rounded-tl-sm rounded-tr-sm object-cover object-center" />
         <div className="absolute bottom-3 right-3 z-10 md:bottom-4 md:right-4">
           <label htmlFor="cover" className="flex cursor-pointer items-center justify-center gap-2 rounded bg-primary px-2 py-1 text-sm font-medium text-white hover:bg-opacity-80 md:px-4">
             <input type="file" name="cover" id="cover" className="sr-only" />
             <span>
-              <IoCameraOutline />
+              <IoCameraOutline className='text-[1rem] md:text-[1.5rem]' />
             </span>
-            <span>Edit</span>
+            <span className='text-[.8rem] md:text-lg'>Edit</span>
           </label>
         </div>
       </div>
       <div className="px-4 pb-6 text-center lg:pb-8 xl:pb-11.5">
-        <div className="relative z-30 mx-auto -mt-22 h-30 w-full max-w-30 rounded-full bg-white/20 p-1 backdrop-blur sm:h-44 sm:max-w-44 sm:p-3">
+        <div className="relative z-30 mx-auto -mt-22 h-32 w-full max-w-32 rounded-full bg-white/20 p-1 backdrop-blur sm:h-44 sm:max-w-44 sm:p-3">
           <div className="relative drop-shadow-2">
             <img src={userPhoto} alt="profile" />
             <label htmlFor="profile" className="absolute bottom-0 right-0 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 sm:bottom-2 sm:right-2">
@@ -56,7 +56,7 @@ const Card = ({user}) => {
               About Me
             </h4>
             <p className="mt-4 text-sm font-normal text-secondary">
-             {user.about}
+              {user.about}
             </p>
           </div>
 

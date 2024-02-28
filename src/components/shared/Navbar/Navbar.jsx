@@ -111,7 +111,7 @@ const Navbar = () => {
               
               onClick={handleDrowar}
               type="button"
-              className="flex items-center gap-3 justify-end">
+              className="flex items-center gap-3 justify-end focus:outline-none focus:ring-0 focus:border-none">
               <span className="hidden lg:flex items-end flex-col">
                 <span className="block text-sm font-medium text-black">Fayshal Rana</span>
                 <span className="block text-xs font-medium text-secondary">Developer</span>

@@ -3,9 +3,14 @@ import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import Breadcrumb1 from '../../components/Breadcrumb/Style1/Breadcrumb1'
 import Breadcrumb2 from '../../components/Breadcrumb/Style2/Breadcrumb2'
 import Breadcrumb3 from '../../components/Breadcrumb/Style3/Breadcrumb3'
+import { Helmet } from 'react-helmet'
 
 const Breadcrumb = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Breadcrumb</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Breadcrumb"} />
@@ -49,6 +54,7 @@ const Breadcrumb = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

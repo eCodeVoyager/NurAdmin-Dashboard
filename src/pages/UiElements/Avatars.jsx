@@ -9,8 +9,13 @@ import Avatar2sm from '../../components/Avatars/Style2/Avatar2sm'
 import Avatar2md from '../../components/Avatars/Style2/Avatar2md'
 import Avatar2xl from '../../components/Avatars/Style2/Avatar2xl'
 import AvatarTwoLg from '../../components/Avatars/Style2/AvatarTwoLg'
+import { Helmet } from 'react-helmet'
 const Avatars = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Avatars</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Avatars"} />
@@ -48,6 +53,7 @@ const Avatars = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

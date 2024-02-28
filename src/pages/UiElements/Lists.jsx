@@ -3,9 +3,14 @@ import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import ListStyle1 from '../../components/Lists/ListStyle1'
 import ListStyle2 from '../../components/Lists/ListStyle2'
 import ListStyle3 from '../../components/Lists/ListStyle3'
+import { Helmet } from 'react-helmet'
 
 const Lists = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Lists</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Lists"} />
@@ -51,6 +56,7 @@ const Lists = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

@@ -4,8 +4,13 @@ import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import { RiUser6Line } from "react-icons/ri";
 import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
 import { TfiRulerPencil } from "react-icons/tfi";
+import { Helmet } from 'react-helmet';
 const ButtonGroup = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Button Group</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Buttons Group"} />
@@ -47,6 +52,7 @@ const ButtonGroup = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

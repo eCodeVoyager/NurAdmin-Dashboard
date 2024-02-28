@@ -3,9 +3,14 @@ import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import ContactForm from '../../components/FormLayout/ContactForm/ContactForm'
 import SignInForm from '../../components/FormLayout/SignInForm/SignInForm'
 import SignUpForm from '../../components/FormLayout/SignUpForm/SignUpForm'
+import { Helmet } from 'react-helmet'
 
 const FormLayOut = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Form layout</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Form Layout"} />
@@ -24,6 +29,7 @@ const FormLayOut = () => {
         </div>
       </div >
     </div >
+    </>
   )
 }
 

@@ -9,6 +9,7 @@ import userImg2 from '../../assets/images/user-22.png'
 import userImg3 from '../../assets/images/user-23.png'
 import userImg4 from '../../assets/images/user-24.png'
 import userImg5 from '../../assets/images/user-25.png'
+import { Helmet } from 'react-helmet'
 
 const Notification = () => {
   const userData = [
@@ -50,73 +51,78 @@ const Notification = () => {
   ]
 
   return (
-    <div className='container_fluid'>
-      <div className="mx-auto max-w-242.5">
-        <BredCrumb pageName={"Notification"} />
+    <>
+      <Helmet>
+        <title>NurAdmin | Notifications</title>
+      </Helmet>
+      <div className='container_fluid'>
+        <div className="mx-auto max-w-242.5">
+          <BredCrumb pageName={"Notification"} />
 
 
-        <div className="flex flex-col gap-7">
-          {/* Notification style one  */}
-          <div className="rounded-sm border border-stroke bg-white shadow-default ">
-            <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
-              <h3 className="font-medium text-black">
-                Notifications Style 1
-              </h3>
+          <div className="flex flex-col gap-7">
+            {/* Notification style one  */}
+            <div className="rounded-sm border border-stroke bg-white shadow-default ">
+              <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
+                <h3 className="font-medium text-black">
+                  Notifications Style 1
+                </h3>
+              </div>
+
+              <div className="p-4 sm:p-6 xl:p-10">
+                <NotificationStyle1 />
+              </div>
             </div>
 
-            <div className="p-4 sm:p-6 xl:p-10">
-              <NotificationStyle1 />
-            </div>
-          </div>
+            {/* Notification style two  */}
+            <div className="rounded-sm border border-stroke bg-white shadow-default ">
+              <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
+                <h3 className="font-medium text-black">
+                  Notifications Style two
+                </h3>
+              </div>
 
-          {/* Notification style two  */}
-          <div className="rounded-sm border border-stroke bg-white shadow-default ">
-            <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
-              <h3 className="font-medium text-black">
-                Notifications Style two
-              </h3>
-            </div>
-
-            <div className="p-4 sm:p-6 xl:p-10">
-              <NotificationStyle2 />
-            </div>
-          </div>
-
-
-          {/* Notification style three  */}
-          <div className="rounded-sm border border-stroke bg-white shadow-default ">
-            <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
-              <h3 className="font-medium text-black">
-                Notifications Style three
-              </h3>
+              <div className="p-4 sm:p-6 xl:p-10">
+                <NotificationStyle2 />
+              </div>
             </div>
 
-            <div className="p-4 sm:p-6 xl:p-10">
-              <NotificationStyle3 />
+
+            {/* Notification style three  */}
+            <div className="rounded-sm border border-stroke bg-white shadow-default ">
+              <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
+                <h3 className="font-medium text-black">
+                  Notifications Style three
+                </h3>
+              </div>
+
+              <div className="p-4 sm:p-6 xl:p-10">
+                <NotificationStyle3 />
+              </div>
             </div>
-          </div>
 
 
-          {/* Notification style four  */}
-          <div className="rounded-sm border border-stroke bg-white shadow-default ">
-            <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
-              <h3 className="font-medium text-black">
-                Notifications Style three
-              </h3>
-            </div>
+            {/* Notification style four  */}
+            <div className="rounded-sm border border-stroke bg-white shadow-default ">
+              <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
+                <h3 className="font-medium text-black">
+                  Notifications Style three
+                </h3>
+              </div>
 
-            <div className="p-4 sm:p-6 xl:p-10">
-              <div className="flex flex-col gap-5">
-                {
-                  userData.map((user, idx) => <NotificationStyle4 mainBoxclassName={idx === 3 ? "border-red-500" : ""} activeSignclassName={idx === 3? "bg-red-500":""} user={user} />)
-                }
+              <div className="p-4 sm:p-6 xl:p-10">
+                <div className="flex flex-col gap-5">
+                  {
+                    userData.map((user, idx) => <NotificationStyle4 mainBoxclassName={idx === 3 ? "border-red-500" : ""} activeSignclassName={idx === 3 ? "bg-red-500" : ""} user={user} />)
+                  }
 
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

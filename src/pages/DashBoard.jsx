@@ -1,10 +1,16 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const DashBoard = () => {
   return (
-    <div className='container_fluid'>
-      Dashboard
-    </div>
+    <>
+      <Helmet>
+        <title>NurAdmin | Dashboard</title>
+      </Helmet>
+      <div className='container_fluid'>
+        Dashboard
+      </div>
+    </>
   )
 }
 

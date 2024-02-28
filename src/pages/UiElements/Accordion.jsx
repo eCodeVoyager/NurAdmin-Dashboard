@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb';
 import Accordion1 from '../../components/Accordion/Accordion1';
 import Accordion2 from '../../components/Accordion/Accordion2';
+import { Helmet } from 'react-helmet';
 
 const Accordion = () => {
   const [openAccordionIndex, setOpenAccordionIndex] = useState(null);
@@ -11,6 +12,10 @@ const Accordion = () => {
   };
 
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Accordion</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Accordion"} />
@@ -53,6 +58,7 @@ const Accordion = () => {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

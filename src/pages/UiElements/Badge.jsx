@@ -36,9 +36,14 @@ import DangerBadge4 from '../../components/Badge/Style4/DangerBadge4'
 import GrayBadge4 from '../../components/Badge/Style4/GrayBadge4'
 import SuccessBadge4 from '../../components/Badge/Style4/SuccessBadge4'
 import InfoBadge4 from '../../components/Badge/Style4/InfoBadge4'
+import { Helmet } from 'react-helmet'
 
 const Badge = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Badge</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Badge"} />
@@ -130,6 +135,7 @@ const Badge = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

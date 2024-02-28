@@ -3,8 +3,13 @@ import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import signInSvg from '../../assets/images/illustration-03.svg'
 import logoDark from '../../assets/images/logo-dark.svg'
 import SignUpFrom from '../../components/SignUp/SignUpFrom'
+import { Helmet } from 'react-helmet'
 const SignUp = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Sign up</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Sing up"} />
@@ -33,6 +38,7 @@ const SignUp = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

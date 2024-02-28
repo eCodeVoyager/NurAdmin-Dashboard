@@ -1,8 +1,13 @@
 import React from 'react'
 import darkLogo from '../../assets/images/logo-dark.svg'
 import TwoStepVerificationCard from '../../components/TwoStepVerificationCard/TwoStepVerificationCard'
+import { Helmet } from 'react-helmet'
 const TwoStepVerification = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Two step verification</title>
+      </Helmet>
     <section className="overflow-hidden px-4 md:px-8">
       <div className="flex h-screen flex-col items-center justify-center overflow-hidden">
         <div className="no-scrollbar overflow-y-auto py-20">
@@ -18,6 +23,7 @@ const TwoStepVerification = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

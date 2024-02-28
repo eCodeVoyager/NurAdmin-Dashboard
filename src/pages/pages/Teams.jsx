@@ -6,6 +6,7 @@ import memberOne from "../../assets/images/team-01.png"
 import member2 from "../../assets/images/team-02.png"
 import member3 from "../../assets/images/team-03.png"
 import member4 from "../../assets/images/team-04.png"
+import { Helmet } from 'react-helmet'
 const Teams = () => {
   const dataOne = [
     {
@@ -31,6 +32,10 @@ const Teams = () => {
 ];
 
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Team</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Team"} />
@@ -70,6 +75,7 @@ const Teams = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

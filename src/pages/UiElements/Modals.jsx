@@ -3,6 +3,7 @@ import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import Modal1 from '../../components/Modals/Modal1'
 import Modal2 from '../../components/Modals/Modal2'
 import Modal3 from '../../components/Modals/Modal3'
+import { Helmet } from 'react-helmet'
 
 const Modals = () => {
   const [popupOne, setPopupOne] = React.useState(false);
@@ -20,6 +21,10 @@ const closeModalThree = () => {
 }
 
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Modals</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Modals"} />
@@ -55,6 +60,7 @@ const closeModalThree = () => {
         </div >
       </div >
     </div >
+    </>
   )
 }
 

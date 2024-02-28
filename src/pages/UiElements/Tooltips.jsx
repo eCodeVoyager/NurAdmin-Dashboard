@@ -8,9 +8,14 @@ import TooltipOnTop2 from '../../components/Tooltips/TooltipStyle2/TooltipOnTop2
 import TooltipOnRight2 from '../../components/Tooltips/TooltipStyle2/TooltipOnRight2'
 import TooltipOnLeft2 from '../../components/Tooltips/TooltipStyle2/TooltipOnLeft2'
 import TooltopOnBottom2 from '../../components/Tooltips/TooltipStyle2/TooltopOnBottom2'
+import { Helmet } from 'react-helmet'
 
 const Tooltips = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Tooltips</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Tooltips"} />
@@ -71,6 +76,7 @@ const Tooltips = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

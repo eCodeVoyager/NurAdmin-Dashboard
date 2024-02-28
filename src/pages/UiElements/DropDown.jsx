@@ -1,9 +1,14 @@
 import React from 'react'
 import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import DropdownStyle1 from '../../components/Dropdowns/DropdownStyle1/DropdownStyle1'
+import { Helmet } from 'react-helmet'
 
 const DropDown = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Dropdown</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Dropdowns"} />
@@ -52,6 +57,7 @@ const DropDown = () => {
 
       </div>
     </div>
+    </>
   )
 }
 

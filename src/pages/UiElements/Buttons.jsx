@@ -3,8 +3,13 @@ import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import NormalButton from '../../components/Buttons/NormalButtons/NormalButton'
 import ButtonWithIcon from '../../components/Buttons/ButtonWithIcon/ButtonWithIcon'
 import { MdOutlineMail } from "react-icons/md";
+import { Helmet } from 'react-helmet';
 const Buttons = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Buttons</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Buttons"} />
@@ -68,6 +73,7 @@ const Buttons = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

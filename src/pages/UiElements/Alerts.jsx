@@ -3,9 +3,14 @@ import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import AttentionNeeded from '../../components/Alerts/AttentionNeeded'
 import MessageSentSuccessfully from '../../components/Alerts/MessageSentSuccessfully'
 import ErrorMessage from '../../components/Alerts/ErrorMessage'
+import { Helmet } from 'react-helmet'
 
 const Alerts = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Alerts</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Alerts"} />
@@ -21,6 +26,7 @@ const Alerts = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

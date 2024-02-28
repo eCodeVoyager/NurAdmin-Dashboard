@@ -2,9 +2,14 @@ import React from 'react'
 import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import PersonalInfo from '../../components/Setting/PersonalInfo'
 import AddPhoto from '../../components/Setting/AddPhoto'
+import { Helmet } from 'react-helmet'
 
 const Setting = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Setting</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Settings "} />
@@ -19,6 +24,7 @@ const Setting = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

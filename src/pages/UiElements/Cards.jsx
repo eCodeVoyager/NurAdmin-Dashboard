@@ -5,6 +5,7 @@ import cardImg from '../../assets/images/cards-01.png'
 import userImg from '../../assets/images/user-11.png'
 import CardStyle2 from '../../components/Cards/Style2/CardStyle2'
 import CardStyle3 from '../../components/Cards/Style3/CardStyle3'
+import { Helmet } from 'react-helmet'
 const Cards = () => {
   const firstCardData = [
     {
@@ -34,6 +35,10 @@ const Cards = () => {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Cards</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Cards"} />
@@ -69,6 +74,7 @@ const Cards = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

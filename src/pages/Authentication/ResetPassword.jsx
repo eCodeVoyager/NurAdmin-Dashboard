@@ -3,8 +3,13 @@ import BredCrumb from '../../components/shared/Buredcrumb/BredCrumb'
 import signInSvg from '../../assets/images/illustration-03.svg'
 import logoDark from '../../assets/images/logo-dark.svg'
 import ResetPasswordForm from '../../components/ResetPasswordForm/ResetPasswordForm'
+import { Helmet } from 'react-helmet'
 const ResetPassword = () => {
   return (
+    <>
+      <Helmet>
+        <title>NurAdmin | Reset password</title>
+      </Helmet>
     <div className='container_fluid'>
       <div className="mx-auto max-w-242.5">
         <BredCrumb pageName={"Reset Password"} />
@@ -33,6 +38,7 @@ const ResetPassword = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

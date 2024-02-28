@@ -4,6 +4,7 @@ import data from '../lib/FakeDB';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FiEye, FiDownload } from "react-icons/fi";
 import { AiOutlineDelete } from "react-icons/ai";
+import { Helmet } from 'react-helmet';
 const Tables = () => {
     const [tableData, setTableData] = useState(data);
     const [entriesPerPage, setEntriesPerPage] = useState(10); // Updated to show 10 data per page
@@ -47,90 +48,95 @@ const Tables = () => {
     }
 
     return (
-        <div className='container_fluid'>
-            <div className="mx-auto max-w-242.5">
-                <BredCrumb pageName={"Data Tables "} />
+        <>
+            <Helmet>
+                <title>NurAdmin | Table</title>
+            </Helmet>
+            <div className='container_fluid'>
+                <div className="mx-auto max-w-242.5">
+                    <BredCrumb pageName={"Data Tables "} />
 
-                <div className="flex flex-col gap-5 md:gap-7 2xl:gap-10">
-                    <div className="rounded-sm border border-stroke bg-white shadow-default">
-                        <div className="px-[1.875rem] py-[1.125rem] border-b flex justify-between">
-                            <div className="w-[25rem]">
-                                <input type="search" placeholder='Search...' value={searchQuery} onChange={handleSearchChange} className='px-[1.25rem] h-[46px] w-full border focus:outline-none rounded-md' />
+                    <div className="flex flex-col gap-5 md:gap-7 2xl:gap-10">
+                        <div className="rounded-sm border border-stroke bg-white shadow-default">
+                            <div className="px-[1.875rem] py-[1.125rem] border-b flex justify-between">
+                                <div className="w-[25rem]">
+                                    <input type="search" placeholder='Search...' value={searchQuery} onChange={handleSearchChange} className='px-[1.25rem] h-[46px] w-full border focus:outline-none rounded-md' />
+                                </div>
+                                <div className="flex gap-2 items-center">
+                                    <select name="entriesPerPage" value={entriesPerPage} onChange={handleEntriesPerPageChange} className='cursor-pointer focus:border-none focus:outline-none'>
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value={filteredData.length}>All</option>
+                                    </select>
+                                    <p className="capitalize p-0 text-sm font-medium">Entries per page</p>
+                                </div>
                             </div>
-                            <div className="flex gap-2 items-center">
-                                <select name="entriesPerPage" value={entriesPerPage} onChange={handleEntriesPerPageChange} className='cursor-pointer focus:border-none focus:outline-none'>
-                                    <option value="5">5</option>
-                                    <option value="10">10</option>
-                                    <option value="20">20</option>
-                                    <option value={filteredData.length}>All</option>
-                                </select>
-                                <p className="capitalize p-0 text-sm font-medium">Entries per page</p>
-                            </div>
-                        </div>
-                        <div className="w-full">
-                            <table className='w-full'>
-                                <thead>
-                                    <tr className='pb-8'>
-                                        <th className='text-left pb-4 text-sm font-medium text-gray-900 pl-[1.875rem] py-[1.125rem]'>Name</th>
-                                        <th className='text-left pb-4 text-sm font-medium text-gray-900  py-[1.125rem]'>Position</th>
-                                        <th className='text-left pb-4 text-sm font-medium text-gray-900  py-[1.125rem]'>BDay</th>
-                                        <th className='text-left pb-4 text-sm font-medium text-gray-900  py-[1.125rem]'>Email/Phone</th>
-                                        <th className='text-left pb-4 text-sm font-medium text-gray-900  py-[1.125rem]'>Address</th>
-                                        <th className='text-left pb-4 text-sm font-medium text-gray-900 py-[1.125rem]'>Status</th>
-                                        <th className='text-right pb-4 text-sm font-medium text-gray-900 pr-[1.875rem] py-[2rem]'>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {paginatedData.map((item, index) => (
-                                        <tr key={index} className='border'>
-                                            <td className='text-sm font-normal text-gray-700 pl-[1.875rem] py-4'>{item.Name}</td>
-                                            <td className='text-sm font-normal text-gray-700 py-4'>{item.Position}</td>
-                                            <td className='text-sm font-normal text-gray-700 py-4'>{item.BDay}</td>
-                                            <td className='text-sm font-normal text-gray-700 py-4'>{item.Email}</td>
-                                            <td className='text-sm font-normal text-gray-700 py-4'>{item.Address}</td>
-                                            <td className='text-sm font-normal text-gray-700  py-4'>{item.Status}</td>
-                                            <td className='text-sm font-normal text-gray-700 pr-[1.125rem] py-4'>
-                                                <div class="flex items-center justify-end space-x-3">
-                                                    <button class="hover:text-primary">
-                                                        <FiEye className='text-lg' />
-                                                    </button>
-                                                    <button class="hover:text-primary">
-                                                        <AiOutlineDelete className='text-lg' />
-                                                    </button>
-                                                    <button class="hover:text-primary">
-                                                        <FiDownload className='text-lg' />
-                                                    </button>
-                                                </div>
-                                            </td>
-
+                            <div className="w-full">
+                                <table className='w-full'>
+                                    <thead>
+                                        <tr className='pb-8'>
+                                            <th className='text-left pb-4 text-sm font-medium text-gray-900 pl-[1.875rem] py-[1.125rem]'>Name</th>
+                                            <th className='text-left pb-4 text-sm font-medium text-gray-900  py-[1.125rem]'>Position</th>
+                                            <th className='text-left pb-4 text-sm font-medium text-gray-900  py-[1.125rem]'>BDay</th>
+                                            <th className='text-left pb-4 text-sm font-medium text-gray-900  py-[1.125rem]'>Email/Phone</th>
+                                            <th className='text-left pb-4 text-sm font-medium text-gray-900  py-[1.125rem]'>Address</th>
+                                            <th className='text-left pb-4 text-sm font-medium text-gray-900 py-[1.125rem]'>Status</th>
+                                            <th className='text-right pb-4 text-sm font-medium text-gray-900 pr-[1.875rem] py-[2rem]'>Action</th>
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                        {/* Pagination */}
-                        <div className="flex justify-between px-[1.875rem] py-[2rem]">
-                            <div className='flex items-center'>
-                                <button onClick={() => setCurrentPage(prevPage => Math.max(prevPage - 1, 1))} disabled={currentPage === 1} className="px-3 py-1  text-gray-600 rounded-md disabled:opacity-50"><IoIosArrowBack /></button>
+                                    </thead>
+                                    <tbody>
+                                        {paginatedData.map((item, index) => (
+                                            <tr key={index} className='border'>
+                                                <td className='text-sm font-normal text-gray-700 pl-[1.875rem] py-4'>{item.Name}</td>
+                                                <td className='text-sm font-normal text-gray-700 py-4'>{item.Position}</td>
+                                                <td className='text-sm font-normal text-gray-700 py-4'>{item.BDay}</td>
+                                                <td className='text-sm font-normal text-gray-700 py-4'>{item.Email}</td>
+                                                <td className='text-sm font-normal text-gray-700 py-4'>{item.Address}</td>
+                                                <td className='text-sm font-normal text-gray-700  py-4'>{item.Status}</td>
+                                                <td className='text-sm font-normal text-gray-700 pr-[1.125rem] py-4'>
+                                                    <div class="flex items-center justify-end space-x-3">
+                                                        <button class="hover:text-primary">
+                                                            <FiEye className='text-lg' />
+                                                        </button>
+                                                        <button class="hover:text-primary">
+                                                            <AiOutlineDelete className='text-lg' />
+                                                        </button>
+                                                        <button class="hover:text-primary">
+                                                            <FiDownload className='text-lg' />
+                                                        </button>
+                                                    </div>
+                                                </td>
 
-                                {pageNumbers.map(number => (
-                                    <button key={number} onClick={() => setCurrentPage(number)} className={`mx-1 px-3 py-1 rounded-md ${currentPage === number ? 'bg-primary text-white' : 'text-blue-500'}`}>
-                                        {number}
-                                    </button>
-                                ))}
-                                <button onClick={() => setCurrentPage(prevPage => Math.min(prevPage + 1, totalPages))} disabled={currentPage === totalPages} className="px-3 py-1  text-gray-600 rounded-md disabled:opacity-50"><IoIosArrowForward /></button>
-
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
                             </div>
-                            <div className="">
-                                <span>Showing {currentPage} to {entriesPerPage} of {tableData.length} entries</span>
+                            {/* Pagination */}
+                            <div className="flex justify-between px-[1.875rem] py-[2rem]">
+                                <div className='flex items-center'>
+                                    <button onClick={() => setCurrentPage(prevPage => Math.max(prevPage - 1, 1))} disabled={currentPage === 1} className="px-3 py-1  text-gray-600 rounded-md disabled:opacity-50"><IoIosArrowBack /></button>
+
+                                    {pageNumbers.map(number => (
+                                        <button key={number} onClick={() => setCurrentPage(number)} className={`mx-1 px-3 py-1 rounded-md ${currentPage === number ? 'bg-primary text-white' : 'text-blue-500'}`}>
+                                            {number}
+                                        </button>
+                                    ))}
+                                    <button onClick={() => setCurrentPage(prevPage => Math.min(prevPage + 1, totalPages))} disabled={currentPage === totalPages} className="px-3 py-1  text-gray-600 rounded-md disabled:opacity-50"><IoIosArrowForward /></button>
+
+                                </div>
+                                <div className="">
+                                    <span>Showing {currentPage} to {entriesPerPage} of {tableData.length} entries</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+
                 </div>
-
-
             </div>
-        </div>
+        </>
     );
 };
 

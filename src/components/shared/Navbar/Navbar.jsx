@@ -10,13 +10,16 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import Notifiy from "./Notifiy";
 import { useEffect, useRef, useState } from "react";
 import Message from "./Message";
+import UserDrowar from "./UserDrowar";
 
 const Navbar = () => {
   const { toggleSidebar } = useSidebar();
   const [message, setMessage] = useState(false);
   const [notify, setNotify] = useState(false);
+  const [userDrowar, setUserDrowar] = useState(false);
   const liRef = useRef(null);
   const msgLiRef = useRef(null);
+  const drowarLiReft = useRef(null);
 
   const handleNotify = () => {
     setNotify(!notify);
@@ -26,12 +29,19 @@ const Navbar = () => {
     setMessage(!message);
   };
 
+  const handleDrowar = () => {
+    setUserDrowar(!userDrowar);
+  };
+
   const handleClickOutside = (event) => {
     if (liRef.current && !liRef.current.contains(event.target)) {
       setNotify(false);
     }
     if (msgLiRef.current && !msgLiRef.current.contains(event.target)) {
       setMessage(false);
+    }
+    if (drowarLiReft.current && !drowarLiReft.current.contains(event.target)) {
+      setUserDrowar(false);
     }
   };
 
@@ -67,7 +77,7 @@ const Navbar = () => {
             </li>
 
             <li
-             ref={liRef}
+              ref={liRef}
               onClick={handleNotify} className="cursor-pointer relative flex h-8 bg-backGround w-8 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary">
               <span className="absolute -top-0.5 right-0 z-10 h-2 w-2 rounded-full bg-red-600">
                 <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75"></span>
@@ -81,23 +91,27 @@ const Navbar = () => {
 
             </li>
             <li
-            ref={msgLiRef}
-            onClick={handleMessage} className="cursor-pointer relative flex h-8 bg-backGround w-8 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary" href="#" >
-                <span className="absolute -top-0.5 right-0 z-10 h-2 w-2 rounded-full bg-red-600">
-                  <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75"></span>
-                </span>
-                <BsChatDots className="text-xl" />
-                 {/* Dropdown  */}
-                {
-                  message && <Message />
-                }
-              
+              ref={msgLiRef}
+              onClick={handleMessage} className="cursor-pointer relative flex h-8 bg-backGround w-8 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary" href="#" >
+              <span className="absolute -top-0.5 right-0 z-10 h-2 w-2 rounded-full bg-red-600">
+                <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75"></span>
+              </span>
+              <BsChatDots className="text-xl" />
+              {/* Dropdown  */}
+              {
+                message && <Message />
+              }
+
             </li>
 
 
           </ul>
-          <div className="lg:w-full relative">
-            <button className="flex items-center gap-3 justify-end">
+          <div className="lg:w-full relative" ref={drowarLiReft}>
+            <button
+              
+              onClick={handleDrowar}
+              type="button"
+              className="flex items-center gap-3 justify-end">
               <span className="hidden lg:flex items-end flex-col">
                 <span className="block text-sm font-medium text-black">Fayshal Rana</span>
                 <span className="block text-xs font-medium text-secondary">Developer</span>
@@ -105,8 +119,11 @@ const Navbar = () => {
               <div className="w-12 h-12 rounded-complete overflow-hidden">
                 <img className="w-full h-full object-cover" src={userImg} alt="user image" />
               </div>
-              <RiArrowDownSLine className="text-xl hidden lg:inline" />
+              <RiArrowDownSLine className={`text-xl hidden lg:inline duration-300 ${userDrowar ? "rotate-180" : ""}`} />
             </button>
+            {
+              userDrowar && <UserDrowar  handleDrowar={handleDrowar}/>
+            }
           </div>
         </div>
       </nav>

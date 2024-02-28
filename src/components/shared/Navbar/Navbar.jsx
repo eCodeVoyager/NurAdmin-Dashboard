@@ -7,9 +7,31 @@ import userImg from "../../../assets/images/user-01.png";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { useSidebar } from "../../../context/SidebarProvider";
 import { RxHamburgerMenu } from "react-icons/rx";
+import Notifiy from "./Notifiy";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
   const { toggleSidebar } = useSidebar();
+
+  const [notify, setNotify] = useState(false);
+  const liRef = useRef(null);
+
+  const handleNotify = () => {
+    setNotify(!notify);
+  };
+
+  const handleClickOutside = (event) => {
+    if (liRef.current && !liRef.current.contains(event.target)) {
+      setNotify(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
 
   return (
@@ -36,18 +58,23 @@ const Navbar = () => {
               <DarkMood />
             </li>
 
-            <li>
-              <Link className="relative flex h-8 bg-backGround w-8 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary" href="#" >
-                <span class="absolute -top-0.5 right-0 z-10 h-2 w-2 rounded-full bg-red-600">
-                  <span class="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75"></span>
-                </span>
-                <BsBell className="text-xl" />
-              </Link>
+            <li
+             ref={liRef}
+              onClick={handleNotify} className="cursor-pointer relative flex h-8 bg-backGround w-8 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary">
+              <span className="absolute -top-0.5 right-0 z-10 h-2 w-2 rounded-full bg-red-600">
+                <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75"></span>
+              </span>
+              <BsBell className="text-xl" />
+              {
+                notify && <Notifiy />
+              }
+
+
             </li>
             <li>
               <Link className="relative flex h-8 bg-backGround w-8 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary" href="#" >
-              <span class="absolute -top-0.5 right-0 z-10 h-2 w-2 rounded-full bg-red-600">
-                  <span class="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75"></span>
+                <span className="absolute -top-0.5 right-0 z-10 h-2 w-2 rounded-full bg-red-600">
+                  <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75"></span>
                 </span>
                 <BsChatDots className="text-xl" />
               </Link>

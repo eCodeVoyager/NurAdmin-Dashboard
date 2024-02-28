@@ -9,20 +9,29 @@ import { useSidebar } from "../../../context/SidebarProvider";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Notifiy from "./Notifiy";
 import { useEffect, useRef, useState } from "react";
+import Message from "./Message";
 
 const Navbar = () => {
   const { toggleSidebar } = useSidebar();
-
+  const [message, setMessage] = useState(false);
   const [notify, setNotify] = useState(false);
   const liRef = useRef(null);
+  const msgLiRef = useRef(null);
 
   const handleNotify = () => {
     setNotify(!notify);
   };
 
+  const handleMessage = () => {
+    setMessage(!message);
+  };
+
   const handleClickOutside = (event) => {
     if (liRef.current && !liRef.current.contains(event.target)) {
       setNotify(false);
+    }
+    if (msgLiRef.current && !msgLiRef.current.contains(event.target)) {
+      setMessage(false);
     }
   };
 
@@ -32,7 +41,6 @@ const Navbar = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-
 
   return (
     <header className="sticky top-0 z-[999] flex w-full bg-foreGround shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:drop-shadow-none">
@@ -65,25 +73,31 @@ const Navbar = () => {
                 <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75"></span>
               </span>
               <BsBell className="text-xl" />
+              {/* Dropdown  */}
               {
                 notify && <Notifiy />
               }
 
 
             </li>
-            <li>
-              <Link className="relative flex h-8 bg-backGround w-8 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary" href="#" >
+            <li
+            ref={msgLiRef}
+            onClick={handleMessage} className="cursor-pointer relative flex h-8 bg-backGround w-8 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary" href="#" >
                 <span className="absolute -top-0.5 right-0 z-10 h-2 w-2 rounded-full bg-red-600">
                   <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75"></span>
                 </span>
                 <BsChatDots className="text-xl" />
-              </Link>
+                 {/* Dropdown  */}
+                {
+                  message && <Message />
+                }
+              
             </li>
 
 
           </ul>
-          <div className="lg:w-full">
-            <Link className="flex items-center gap-3 justify-end">
+          <div className="lg:w-full relative">
+            <button className="flex items-center gap-3 justify-end">
               <span className="hidden lg:flex items-end flex-col">
                 <span className="block text-sm font-medium text-black">Fayshal Rana</span>
                 <span className="block text-xs font-medium text-secondary">Developer</span>
@@ -92,7 +106,7 @@ const Navbar = () => {
                 <img className="w-full h-full object-cover" src={userImg} alt="user image" />
               </div>
               <RiArrowDownSLine className="text-xl hidden lg:inline" />
-            </Link>
+            </button>
           </div>
         </div>
       </nav>

@@ -4,6 +4,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import SummeryCard from '../components/Dashboard/SummeryCard';
 import ChartOne from '../components/Charts/ChartOne';
 import ChartTwo from '../components/Charts/ChartTwo';
+import ChartThree from '../components/Charts/ChartThree';
+
 const DashBoard = () => {
   const summeryData = [
     {
@@ -79,6 +81,16 @@ const DashBoard = () => {
             <ChartTwo />
           </div>
           {/* Chart two End here  */}
+
+          {/* chart thee start here  */}
+          <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7 shadow-md md:px-7 xl:col-span-5">
+            <ChartThree />
+          </div>
+          {/* chart thee end here  */}
+
+          {/* Map One Start   */}
+          <div className="col-span-12 rounded-sm border border-stroke bg-white px-7 py-6 shadow-md xl:col-span-7"></div>
+          {/* Map One End   */}
         </div>
       </div>
     </>

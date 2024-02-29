@@ -5,6 +5,7 @@ import SummeryCard from '../components/Dashboard/SummeryCard';
 import ChartOne from '../components/Charts/ChartOne';
 import ChartTwo from '../components/Charts/ChartTwo';
 import ChartThree from '../components/Charts/ChartThree';
+import MapOne from '../components/Map/MapOne';
 
 const DashBoard = () => {
   const summeryData = [
@@ -89,7 +90,9 @@ const DashBoard = () => {
           {/* chart thee end here  */}
 
           {/* Map One Start   */}
-          <div className="col-span-12 rounded-sm border border-stroke bg-white px-7 py-6 shadow-md xl:col-span-7"></div>
+          <div className="col-span-12 rounded-sm border border-stroke bg-white px-7 py-6 shadow-md xl:col-span-7">
+            <MapOne/>
+          </div>
           {/* Map One End   */}
         </div>
       </div>

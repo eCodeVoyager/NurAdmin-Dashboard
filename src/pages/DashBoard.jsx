@@ -6,6 +6,8 @@ import ChartOne from '../components/Charts/ChartOne';
 import ChartTwo from '../components/Charts/ChartTwo';
 import ChartThree from '../components/Charts/ChartThree';
 import MapOne from '../components/Map/MapOne';
+import TopChannels from '../components/Dashboard/TopChannels';
+import ChatCard from '../components/Dashboard/ChatCard';
 
 const DashBoard = () => {
   const summeryData = [
@@ -94,6 +96,16 @@ const DashBoard = () => {
             <MapOne/>
           </div>
           {/* Map One End   */}
+
+          {/* Top channels  table start here*/}
+          <div className="col-span-12 xl:col-span-8">
+            <TopChannels/>
+          </div>
+          {/* Top channels  table end here*/}
+
+          {/* Chat card start here  */}
+          <ChatCard/>
+          {/* Chat card end here  */}
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
-text {
+#mapOne text {
   fill: white;
 }
-._u5cITtZnGk9D_6uoElx .jvectormap-zoomin {
+#mapOne ._u5cITtZnGk9D_6uoElx .jvectormap-zoomin {
   top: 92% !important;
   left: 90% !important;
   padding: 6px !important;
@@ -16,7 +16,7 @@ text {
   width: 16px !important;
   height: 16px !important;
 }
-._u5cITtZnGk9D_6uoElx .jvectormap-zoomout {
+#mapOne ._u5cITtZnGk9D_6uoElx .jvectormap-zoomout {
   top: 92% !important;
   left: 95% !important;
   padding: 6px !important;

@@ -105,7 +105,7 @@ const options = {
     yaxis: {
         title: {
             style: {
-                fontSize: '0px',
+                fontSize: '10px',
             },
         },
         min: 0,
@@ -114,7 +114,7 @@ const options = {
 };
 
 const ChartOne = () => {
-    const [state, setState] = useState ({
+    const [state, setState] = useState({
         series: [
             {
                 name: 'Product One',

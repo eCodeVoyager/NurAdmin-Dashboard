@@ -12,7 +12,7 @@ const MapOne = () => {
             <h4 className="mb-2 text-xl font-bold text-black">
                 Region labels
             </h4>
-            <div className="w-full h-[200px] md:h-[420px]">
+            <div id='mapOne' className="w-full h-[200px] md:h-[420px]">
                 <VectorMap
                     map={usAea}
                     backgroundColor='#fff'

@@ -5,6 +5,7 @@ import ChartFour from '../components/Charts/ChartFour'
 import ChartFive from '../components/Charts/ChartFive'
 import ChartSix from '../components/Charts/ChartSix'
 import ChartSeven from '../components/Charts/ChartSeven'
+import ChartEight from '../components/Charts/ChartEight'
 
 const Charts = () => {
   return (
@@ -60,6 +61,7 @@ const Charts = () => {
           {/* Chart eight start here  */}
           <div className="col-span-12 lg:col-span-5">
             <div className="rounded-sm border border-stroke bg-white shadow-md">
+            <ChartEight/>
             </div>
           </div>
           {/* Chart eight end here  */}

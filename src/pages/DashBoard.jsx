@@ -106,6 +106,7 @@ const DashBoard = () => {
           {/* Chat card start here  */}
           <ChatCard/>
           {/* Chat card end here  */}
+          
         </div>
       </div>
     </>

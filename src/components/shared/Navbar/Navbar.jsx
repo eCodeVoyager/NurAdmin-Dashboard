@@ -73,7 +73,7 @@ const Navbar = () => {
         <div className="flex gap-6 items-center">
           <ul className="flex gap-3 items-center">
             <li>
-              <DarkMood />
+              {/* <DarkMood /> */}
             </li>
 
             <li

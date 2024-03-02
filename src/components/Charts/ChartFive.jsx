@@ -61,6 +61,16 @@ const ChartFive = () => {
                     show: false,
                 },
             },
+            yaxis: {
+                title: {
+                    style: {
+                        fontSize: '10px',
+                    },
+                },
+                min: 0,
+                max: 100,
+                tickAmount: 5,
+            },
             tooltip: {
                 x: {
                     format: 'dd/MM/yy HH:mm'

@@ -65,6 +65,7 @@ const ChartFour = () => {
                 },
                 min: 0,
                 max: 400,
+                tickAmount: 6,
             },
             fill: {
                 opacity: 1

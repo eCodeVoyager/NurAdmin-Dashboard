@@ -68,6 +68,7 @@ const ChartEight = () => {
                 },
                 min: 0,
                 max: 400,
+                tickAmount: 4,
             },
             fill: {
                 opacity: 1

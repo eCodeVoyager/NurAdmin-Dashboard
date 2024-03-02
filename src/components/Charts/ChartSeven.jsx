@@ -69,6 +69,7 @@ const ChartSeven = () => {
                     show: false,
                 },
             },
+
             yaxis: {
                 title: {
                     style: {
@@ -77,10 +78,24 @@ const ChartSeven = () => {
                 },
                 min: 100,
                 max: 350,
+                tickAmount: 5,
             },
 
             legend: {
                 show: false  // Set to false to hide the legend
+            },
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'dark',
+                    type: 'vertical',
+                    shadeIntensity: 0.5,
+                    gradientToColors: ['#ABE5A1'],
+                    inverseColors: false,
+                    opacityFrom: 0.6,
+                    opacityTo: 0.2,
+                    stops: [0, 50, 100],
+                }
             }
         },
     });

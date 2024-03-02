@@ -129,36 +129,36 @@ const ChartOne = () => {
     });
     return (
         <>
-            <div class="flex flex-wrap items-start justify-between gap-3 md:flex-nowrap">
-                <div class="flex w-full flex-wrap gap-3 md:gap-5">
-                    <div class="flex min-w-48">
-                        <span class="mr-2 mt-1 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-primary">
-                            <span class="block h-2.5 w-full max-w-2.5 rounded-full bg-primary"></span>
+            <div className="flex flex-wrap items-start justify-between gap-3 md:flex-nowrap">
+                <div className="flex w-full flex-wrap gap-3 md:gap-5">
+                    <div className="flex min-w-48">
+                        <span className="mr-2 mt-1 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-primary">
+                            <span className="block h-2.5 w-full max-w-2.5 rounded-full bg-primary"></span>
                         </span>
-                        <div class="w-full">
-                            <p class="font-semibold text-primary">Total Revenue</p>
-                            <p class="text-sm font-medium text-secondary">12.04.2022 - 12.05.2022</p>
+                        <div className="w-full">
+                            <p className="font-semibold text-primary">Total Revenue</p>
+                            <p className="text-sm font-medium text-secondary">12.04.2022 - 12.05.2022</p>
                         </div>
                     </div>
-                    <div class="flex min-w-48">
-                        <span class="mr-2 mt-1 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-secondary">
-                            <span class="block h-2.5 w-full max-w-2.5 rounded-full bg-secondary"></span>
+                    <div className="flex min-w-48">
+                        <span className="mr-2 mt-1 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-secondary">
+                            <span className="block h-2.5 w-full max-w-2.5 rounded-full bg-secondary"></span>
                         </span>
-                        <div class="w-full">
-                            <p class="font-semibold text-secondary">Total Sales</p>
-                            <p class="text-sm font-medium text-secondary">12.04.2022 - 12.05.2022</p>
+                        <div className="w-full">
+                            <p className="font-semibold text-secondary">Total Sales</p>
+                            <p className="text-sm font-medium text-secondary">12.04.2022 - 12.05.2022</p>
                         </div>
                     </div>
                 </div>
-                <div class="flex w-full max-w-45 justify-end">
-                    <div class="inline-flex items-center rounded-md bg-gray-100 p-1.5">
-                        <button class="rounded bg-white px-3 py-1 text-xs font-medium text-black shadow-card hover:bg-white hover:shadow-md">
+                <div className="flex w-full max-w-45 justify-end">
+                    <div className="inline-flex items-center rounded-md bg-gray-100 p-1.5">
+                        <button className="rounded bg-white px-3 py-1 text-xs font-medium text-black shadow-card hover:bg-white hover:shadow-md">
                             Day
                         </button>
-                        <button class="rounded px-3 py-1 text-xs font-medium text-black hover:bg-white hover:shadow-md ">
+                        <button className="rounded px-3 py-1 text-xs font-medium text-black hover:bg-white hover:shadow-md ">
                             Week
                         </button>
-                        <button class="rounded px-3 py-1 text-xs font-medium text-black hover:bg-white hover:shadow-md ">
+                        <button className="rounded px-3 py-1 text-xs font-medium text-black hover:bg-white hover:shadow-md ">
                             Month
                         </button>
                     </div>

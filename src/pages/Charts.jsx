@@ -4,6 +4,7 @@ import BredCrumb from '../components/shared/Buredcrumb/BredCrumb'
 import ChartFour from '../components/Charts/ChartFour'
 import ChartFive from '../components/Charts/ChartFive'
 import ChartSix from '../components/Charts/ChartSix'
+import ChartSeven from '../components/Charts/ChartSeven'
 
 const Charts = () => {
   return (
@@ -21,7 +22,7 @@ const Charts = () => {
           <div className="col-span-12">
             <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7 shadow-md md:px-7">
               <div>
-                <h3 class="text-[22px] font-bold text-black">
+                <h3 className="text-[22px] font-bold text-black">
                   Visitors Analytics
                   <ChartFour />
                 </h3>
@@ -50,6 +51,7 @@ const Charts = () => {
           {/* Chart seven start here  */}
           <div className="col-span-12 lg:col-span-7">
             <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7 shadow-md md:px-7 xl:col-span-8">
+              <ChartSeven />
 
             </div>
           </div>
@@ -58,7 +60,6 @@ const Charts = () => {
           {/* Chart eight start here  */}
           <div className="col-span-12 lg:col-span-5">
             <div className="rounded-sm border border-stroke bg-white shadow-md">
-
             </div>
           </div>
           {/* Chart eight end here  */}

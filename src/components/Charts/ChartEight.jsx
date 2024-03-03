@@ -81,20 +81,20 @@ const ChartEight = () => {
     });
     return (
         <div>
-            <div class="flex flex-col gap-2 border-b border-stroke px-6 py-5 md:flex-row md:justify-between">
+            <div className="flex flex-col gap-2 border-b border-stroke px-6 py-5 md:flex-row md:justify-between">
                 <div>
-                    <h2 class="text-[22px] font-bold text-black">
+                    <h2 className="text-[22px] font-bold text-black">
                         Campaigns
                     </h2>
                 </div>
-                <div class="flex items-center">
-                    <p class="font-medium uppercase text-black">Short by:</p>
-                    <div class="relative z-20 inline-block">
-                        <select name="#" id="#" class="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 font-medium outline-none text-secondary">
+                <div className="flex items-center">
+                    <p className="font-medium uppercase text-black">Short by:</p>
+                    <div className="relative z-20 inline-block">
+                        <select name="#" id="#" className="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 font-medium outline-none text-secondary">
                             <option value="">Monthly</option>
                             <option value="">Weekly</option>
                         </select>
-                        <span class="absolute right-1 top-1/2 z-10 -translate-y-1/2">
+                        <span className="absolute right-1 top-1/2 z-10 -translate-y-1/2">
                             <IoIosArrowDown />
                         </span>
                     </div>

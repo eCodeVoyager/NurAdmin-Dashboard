@@ -3,7 +3,7 @@ import './CheckBox2.css'
 const CheckBox2 = () => {
   return (
     <div className="checkbox-wrapper-65">
-      <label for="cbk1-65">
+      <label  htmlFor="cbk1-65">
         <input id="cbk1-65" type="checkbox" />
         <span className="cbx">
           <svg viewBox="0 0 12 11" height="11px" width="12px">

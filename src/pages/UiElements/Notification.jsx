@@ -106,14 +106,14 @@ const Notification = () => {
             <div className="rounded-sm border border-stroke bg-white shadow-default ">
               <div className="border-b border-stroke px-4 py-4 md:px-6 xl:px-7">
                 <h3 className="font-medium text-black">
-                  Notifications Style three
+                  Notifications Style four
                 </h3>
               </div>
 
               <div className="p-4 sm:p-6 xl:p-10">
                 <div className="flex flex-col gap-5">
                   {
-                    userData.map((user, idx) => <NotificationStyle4 mainBoxclassName={idx === 3 ? "border-red-500" : ""} activeSignclassName={idx === 3 ? "bg-red-500" : ""} user={user} />)
+                    userData.map((user, idx) => <NotificationStyle4 key={idx} mainBoxclassName={idx === 3 ? "border-red-500" : ""} activeSignclassName={idx === 3 ? "bg-red-500" : ""} user={user} />)
                   }
 
                 </div>

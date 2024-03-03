@@ -95,14 +95,14 @@ const Tables = () => {
                                                 <td className='whitespace-nowrap text-sm font-normal text-gray-700 py-4'>{item.Address}</td>
                                                 <td className='whitespace-nowrap text-sm font-normal text-gray-700  py-4'>{item.Status}</td>
                                                 <td className='whitespace-nowrap text-sm font-normal text-gray-700 pr-[1.125rem] py-4'>
-                                                    <div class="flex items-center justify-end space-x-3">
-                                                        <button class="hover:text-primary">
+                                                    <div className="flex items-center justify-end space-x-3">
+                                                        <button className="hover:text-primary">
                                                             <FiEye className='text-lg' />
                                                         </button>
-                                                        <button class="hover:text-primary">
+                                                        <button className="hover:text-primary">
                                                             <AiOutlineDelete className='text-lg' />
                                                         </button>
-                                                        <button class="hover:text-primary">
+                                                        <button className="hover:text-primary">
                                                             <FiDownload className='text-lg' />
                                                         </button>
                                                     </div>

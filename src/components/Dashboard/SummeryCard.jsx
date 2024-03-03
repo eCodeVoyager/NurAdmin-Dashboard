@@ -7,8 +7,8 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { FaUserFriends } from "react-icons/fa";
 const SummeryCard = ({ item, index }) => {
     return (
-        <div class="rounded-sm border border-stroke bg-white px-7 py-6 shadow-md">
-            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200">
+        <div className="rounded-sm border border-stroke bg-white px-7 py-6 shadow-md">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200">
                 {
                     index === 0 && // Check if index equals 0
                     <LuEye className='text-2xl text-primary' /> ||
@@ -24,15 +24,15 @@ const SummeryCard = ({ item, index }) => {
                 }
             </div>
 
-            <div class="mt-4 flex items-end justify-between">
+            <div className="mt-4 flex items-end justify-between">
                 <div>
-                    <h4 class="text-2xl font-bold text-black">
+                    <h4 className="text-2xl font-bold text-black">
                         {item.count}
                     </h4>
-                    <span class="text-sm font-medium text-secondary">{item.title}</span>
+                    <span className="text-sm font-medium text-secondary">{item.title}</span>
                 </div>
 
-                <span class={`flex items-center gap-1 text-sm font-medium  ${item.status === false ? "text-primary" : "text-green-500"}`}>
+                <span className={`flex items-center gap-1 text-sm font-medium  ${item.status === false ? "text-primary" : "text-green-500"}`}>
                     {item.percentage}
                     {
                         item.status === false ? <IoArrowDown className='text-lg' /> : <FaArrowUp className='text-lg' />

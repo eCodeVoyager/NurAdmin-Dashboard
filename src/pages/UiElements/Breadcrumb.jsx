@@ -16,38 +16,38 @@ const Breadcrumb = () => {
         <BredCrumb pageName={"Breadcrumb"} />
         <div className="flex flex-col gap-7">
           {/* Style one  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-default">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Breadcrumb Style 1
               </h3>
             </div>
 
-            <div class="p-4 sm:p-6 xl:p-10">
+            <div className="p-4 sm:p-6 xl:p-10">
               <Breadcrumb1 />
             </div>
           </div>
           {/* Style Two  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-default">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Breadcrumb Style 1
               </h3>
             </div>
 
-            <div class="p-4 sm:p-6 xl:p-10">
+            <div className="p-4 sm:p-6 xl:p-10">
               <Breadcrumb2 />
             </div>
           </div>
           {/* Style three  */}
-          <div class="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+          <div className="rounded-sm border border-stroke bg-white shadow-default">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Breadcrumb Style 1
               </h3>
             </div>
 
-            <div class="p-4 sm:p-6 xl:p-10">
+            <div className="p-4 sm:p-6 xl:p-10">
               <Breadcrumb3 />
             </div>
           </div>

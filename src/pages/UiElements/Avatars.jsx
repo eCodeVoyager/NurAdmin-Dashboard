@@ -21,13 +21,13 @@ const Avatars = () => {
         <BredCrumb pageName={"Avatars"} />
         <div className="flex flex-col gap-7">
           <div className="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 lg:px-6 xl:px-9">
-              <h3 class="font-medium text-black">
+            <div className="border-b border-stroke px-4 py-4 lg:px-6 xl:px-9">
+              <h3 className="font-medium text-black">
                 Style 1
               </h3>
             </div>
-            <div class="px-4 py-9 sm:px-6 xl:px-8">
-              <div class="flex items-center gap-6">
+            <div className="px-4 py-9 sm:px-6 xl:px-8">
+              <div className="flex items-center gap-6">
                 <AvatarSM userImg={userImg} />
                 <AvatarMD userImg={userImg} />
                 <AvatarLG userImg={userImg} />
@@ -36,13 +36,13 @@ const Avatars = () => {
             </div>
           </div>
           <div className="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 lg:px-6 xl:px-9">
-              <h3 class="font-medium text-black">
+            <div className="border-b border-stroke px-4 py-4 lg:px-6 xl:px-9">
+              <h3 className="font-medium text-black">
                 Style 2
               </h3>
             </div>
-            <div class="px-4 py-9 md:px-6 xl:px-8">
-              <div class="flex items-center gap-6">
+            <div className="px-4 py-9 md:px-6 xl:px-8">
+              <div className="flex items-center gap-6">
                 <Avatar2sm userImg={userImg} />
                 <Avatar2md userImg={userImg} />
                 <AvatarTwoLg userImg={userImg} />

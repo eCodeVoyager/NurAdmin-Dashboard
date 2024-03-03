@@ -99,7 +99,6 @@ const ChartSeven = () => {
             }
         },
     });
-    console.log(show);
     return (
         <div>
             <div className="mb-6 flex items-start justify-between">

@@ -50,13 +50,13 @@ const Badge = () => {
         <div className="flex flex-col gap-7">
           {/* Badge style one  */}
           <div className="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Badge Style 1
               </h3>
             </div>
-            <div class="p-4 sm:p-6 xl:p-10">
-              <div class="flex flex-wrap items-center gap-2 sm:gap-4">
+            <div className="p-4 sm:p-6 xl:p-10">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-4">
                 <PrimaryBadge />
                 <SecondaryBadge />
                 <DarkBadge />
@@ -71,13 +71,13 @@ const Badge = () => {
           </div>
           {/* Badge style two  */}
           <div className="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Badge Style 2
               </h3>
             </div>
-            <div class="p-4 sm:p-6 xl:p-10">
-              <div class="flex flex-wrap items-center gap-2 sm:gap-4">
+            <div className="p-4 sm:p-6 xl:p-10">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-4">
                 <PrimaryBadge2 />
                 <SecondaryBadge2 />
                 <DarkBadge2 />
@@ -92,13 +92,13 @@ const Badge = () => {
           </div>
           {/* Badge style three  */}
           <div className="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Badge Style 3
               </h3>
             </div>
-            <div class="p-4 sm:p-6 xl:p-10">
-              <div class="flex flex-wrap items-center gap-2 sm:gap-4">
+            <div className="p-4 sm:p-6 xl:p-10">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-4">
                 <PrimaryBadge3 />
                 <SecondaryBadge3 />
                 <DarkBadge3 />
@@ -113,13 +113,13 @@ const Badge = () => {
           </div>
           {/* Badge style three  */}
           <div className="rounded-sm border border-stroke bg-white shadow-default">
-            <div class="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
-              <h3 class="font-medium text-black">
+            <div className="border-b border-stroke px-4 py-4 sm:px-6 xl:px-7">
+              <h3 className="font-medium text-black">
                 Badge Style 4
               </h3>
             </div>
-            <div class="p-4 sm:p-6 xl:p-10">
-            <div class="flex flex-wrap items-center gap-2 sm:gap-4.5">
+            <div className="p-4 sm:p-6 xl:p-10">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4.5">
                     <PrimaryBadge4/>
                     <SecondaryBadge4/>
                     <DarkBadge4/>

@@ -44,7 +44,7 @@ const DashBoard = () => {
         <title>NurAdmin | Dashboard</title>
       </Helmet>
       <div className='container_fluid'>
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7">
           {/* <!-- Card Item Start --> */}
           {
             summeryData.map((item, index) => (
@@ -63,19 +63,19 @@ const DashBoard = () => {
           {/* Chart one End here  */}
           {/* Chart two start here  */}
           <div className="col-span-12 rounded-sm border border-stroke bg-white p-7 shadow-md xl:col-span-4">
-            <div class="mb-4 justify-between gap-4 sm:flex">
+            <div className="mb-4 justify-between gap-4 sm:flex">
               <div>
-                <h4 class="text-xl font-bold text-black">
+                <h4 className="text-xl font-bold text-black">
                   Profit this week
                 </h4>
               </div>
               <div>
-                <div class="relative z-20 inline-block">
-                  <select name="#" id="#" class="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 text-sm font-medium outline-none">
+                <div className="relative z-20 inline-block">
+                  <select name="#" id="#" className="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 text-sm font-medium outline-none">
                     <option value="">This Week</option>
                     <option value="">Last Week</option>
                   </select>
-                  <span class="absolute right-3 top-1/2 z-10 -translate-y-1/2">
+                  <span className="absolute right-3 top-1/2 z-10 -translate-y-1/2">
                     <IoIosArrowDown />
                   </span>
                 </div>

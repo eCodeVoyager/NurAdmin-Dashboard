@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import ReactApexChart from 'react-apexcharts';
 
 const ChartNine = () => {
-    const [chartData, setChartData] = useState({
+    const [chartData, setChartData] = useState(
+        {
         series: [{
             data: [
                 [1327359600000, 30.95],

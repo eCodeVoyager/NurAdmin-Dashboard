@@ -165,11 +165,11 @@ export const router = createBrowserRouter([
       {
         path: "/reset-password",
         element: <ResetPassword/>,
-      }
-        
+      },
+      {path: "/two-step-verification",
+      element: <TwoStepVerification/>,
+    }
     ],
   },
-  {path: "/two-step-verification",
-  element: <TwoStepVerification/>,
-}
+
 ]);

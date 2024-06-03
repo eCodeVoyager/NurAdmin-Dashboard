@@ -1,7 +1,1 @@
-<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group 7">
-<path id="Line 4" d="M1 1H20" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path id="Line 5" d="M5.5 9H20" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path id="Line 6" d="M1 18H20" stroke="white" stroke-width="2" stroke-linecap="round"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" fill="none" viewBox="0 0 21 19"><g id="Group 7"><path id="Line 4" stroke="#fff" stroke-linecap="round" stroke-width="2" d="M1 1H20"/><path id="Line 5" stroke="#fff" stroke-linecap="round" stroke-width="2" d="M5.5 9H20"/><path id="Line 6" stroke="#fff" stroke-linecap="round" stroke-width="2" d="M1 18H20"/></g></svg>

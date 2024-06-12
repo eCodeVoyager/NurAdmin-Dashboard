@@ -1,9 +1,9 @@
-/* import axios from "axios";
+import axios from "axios";
 import Cookies from "js-cookie";
 
 const instance = axios.create({
-  baseURL: `${import.meta.env.VITE_REACT_APP_API_BASE_URL}`,
-  // baseURL: `http://3.110.62.71/api/v1`,
+  baseURL: "http://localhost:3000/api/v1",
+  
   timeout: 30000,
   headers: {
     Accept: "application/json",
@@ -14,15 +14,17 @@ const instance = axios.create({
 // Add a request interceptor
 instance.interceptors.request.use(function (config) {
   // Do something before request is sent
-  let adminInfo;
-  if (Cookies.get("adminInfo")) {
-    adminInfo = JSON.parse(Cookies.get("adminInfo"));
+  let token;
+  if (Cookies.get("token")) {
+    const cookieDetails = JSON.parse(Cookies.get("token"));
+    token = cookieDetails.token;
   }
 
   return {
     ...config,
     headers: {
-      authorization: adminInfo ? `Bearer ${adminInfo.token}` : null,
+      Authorization: "Bearer " + token,
+      "Content-Type": "application/json",
     },
   };
 });
@@ -46,4 +48,4 @@ const requests = {
     instance.delete(url, body, headers).then(responseBody),
 };
 
-export default requests; */
+export default requests;

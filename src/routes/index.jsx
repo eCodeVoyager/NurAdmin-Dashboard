@@ -32,6 +32,9 @@ import SignUp from "../pages/Authentication/SignUp";
 import ResetPassword from "../pages/Authentication/ResetPassword";
 import TwoStepVerification from "../pages/Authentication/TwoStepVerification";
 import Charts from "../pages/Charts";
+import ProtectedRoute from "./ProtectedRoute";
+import MessFormAuth from "../pages/Authentication/MessForm";
+import MemberSignUp from "../pages/Authentication/MemberSignUp";
 
 export const router = createBrowserRouter([
   {
@@ -40,11 +43,27 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <DashBoard />,
+        element: (
+          <ProtectedRoute>
+            <DashBoard />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/add-member",
+        element: (
+          <ProtectedRoute>
+            <MemberSignUp />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/profile",
-        element: <Profile />,
+        element: (
+          <ProtectedRoute>
+            <Profile />,
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/form-element",
@@ -56,11 +75,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "/tables",
-        element: <Tables />,
+        element: (
+          <ProtectedRoute>
+            <Tables />,
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/setting",
-        element: <Setting />,
+        element: (
+          <ProtectedRoute>
+            <Setting />,
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/teams",
@@ -77,6 +104,10 @@ export const router = createBrowserRouter([
       {
         path: "/charts",
         element: <Charts />,
+      },
+      {
+        path: "/mess-form",
+        element: <MessFormAuth />,
       },
       {
         path: "/message",
@@ -108,68 +139,65 @@ export const router = createBrowserRouter([
       },
       {
         path: "/breadcrumb",
-        element: <Breadcrumb/>,
+        element: <Breadcrumb />,
       },
       {
         path: "/buttons",
-        element: <Buttons/>,
+        element: <Buttons />,
       },
       {
         path: "/button-group",
-        element: <ButtonGroup/>,
+        element: <ButtonGroup />,
       },
       {
         path: "/cards",
-        element: <Cards/>,
+        element: <Cards />,
       },
       {
         path: "/dropdowns",
-        element: <DropDown/>,
+        element: <DropDown />,
       },
       {
         path: "/list",
-        element: <Lists/>,
+        element: <Lists />,
       },
       {
         path: "/modals",
-        element: <Modals/>,
+        element: <Modals />,
       },
       {
         path: "/notifications",
-        element: <Notification/>,
+        element: <Notification />,
       },
       {
         path: "/pagination",
-        element: <Pagination/>,
+        element: <Pagination />,
       },
       {
         path: "/spinners",
-        element: <Spinner/>,
+        element: <Spinner />,
       },
       {
         path: "/tabs",
-        element: <Tabs/>,
+        element: <Tabs />,
       },
       {
         path: "/tooltips",
-        element: <Tooltips/>,
+        element: <Tooltips />,
       },
       {
         path: "/sign-in",
-        element: <SingIn/>,
+        element: <SingIn />,
       },
       {
         path: "/sign-up",
-        element: <SignUp/>,
+        element: <SignUp />,
       },
       {
         path: "/reset-password",
-        element: <ResetPassword/>,
+        element: <ResetPassword />,
       },
-      {path: "/two-step-verification",
-      element: <TwoStepVerification/>,
-    }
+      { path: "/two-step-verification", element: <TwoStepVerification /> },
     ],
   },
-
 ]);
